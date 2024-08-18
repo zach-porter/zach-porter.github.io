@@ -1,17 +1,19 @@
+/* General Styles */
 body {
-    font-family: 'Roboto', sans-serif; /* Updated font for a modern look */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #1c1c1c; /* Darker background for a sleek appearance */
-    color: #ddd; /* Light text color for better contrast */
+    background: #121212;
+    color: #f4f4f4;
 }
 
+/* Navigation Bar */
 nav ul {
     display: flex;
-    justify-content: center; /* Centered navigation */
+    justify-content: center;
     list-style: none;
-    background: #222; /* Slightly lighter than the body background */
+    background: #333;
     padding: 15px;
 }
 
@@ -20,87 +22,106 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ff9800; /* Bright accent color */
+    color: #ffa500; /* Updated accent color */
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-weight: 700;
 }
 
-nav ul li a:hover {
-    color: #ffd700; /* Lighter accent on hover */
-}
-
-#intro {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(to right, #333, #555); /* Gradient background for intro */
+/* Header */
+header {
+    position: relative;
+    height: 100vh;
+    background: url('path/to/your/image.jpg') no-repeat center center/cover;
     color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
 .btn {
-    background: #ff9800;
+    background: #ffa500;
     color: white;
-    padding: 12px 25px;
+    padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s ease;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
-    background: #ffd700; /* Lighter button on hover */
+    background-color: #ff8c00;
+    transform: scale(1.1);
 }
 
-footer {
-    text-align: center;
+/* Main Content */
+main {
     padding: 20px;
-    background: #222;
-    color: #bbb; /* Slightly lighter footer text */
-    position: relative; /* Adjusted to avoid overlap issues */
-    margin-top: 20px;
-    width: 100%;
+    background: #181818;
+}
+
+main h1 {
+    color: #ffa500;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
 }
 
 .project {
-    background-color: #2a2a2a; /* Darker project background */
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer shadow */
-    margin-bottom: 25px;
-    padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    background-color: #292929;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    padding: 20px;
+    transition: transform 0.3s ease;
 }
 
 .project h2 {
-    color: #ff9800; /* Accent color for project titles */
+    color: #ffa500;
     margin-bottom: 10px;
 }
 
 .project p {
-    color: #ccc; /* Lighter text for readability */
+    color: #ccc;
 }
 
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background-color: #000;
-    margin-top: 10px;
-    border-radius: 10px; /* Rounded corners for video container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow around video */
+.project:hover {
+    transform: translateY(-5px);
 }
 
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0; /* Remove iframe border */
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header h1, header p, .btn {
+    animation: fadeIn 2s ease-in-out;
 }
