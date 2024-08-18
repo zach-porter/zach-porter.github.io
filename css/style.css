@@ -31,7 +31,7 @@ nav ul li a {
 header {
     position: relative;
     height: 100vh;
-    background: url('path/to/your/image.jpg') no-repeat center center/cover;
+    background: url('../assets/Selfie.jpeg') no-repeat center center/cover;
     color: white;
     text-align: center;
     display: flex;
