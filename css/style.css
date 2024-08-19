@@ -9,12 +9,18 @@ body {
 }
 
 /* Navigation Bar */
+nav {
+    position: relative;
+    z-index: 3; /* Ensure the nav is above the header overlay */
+}
+
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
     background: #333;
     padding: 15px;
+    margin: 0;
 }
 
 nav ul li {
@@ -26,7 +32,6 @@ nav ul li a {
     text-decoration: none;
     font-weight: 700;
 }
-
 /* Header */
 header {
     position: relative;
