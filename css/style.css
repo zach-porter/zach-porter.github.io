@@ -105,3 +105,116 @@ footer {
 .hero-content h1, .hero-content p, .btn {
     animation: fadeIn 2s ease-in-out;
 }
+
+/* Typography Enhancements */
+h1, h2, h3 {
+    font-weight: 700;
+    color: #ffa500;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.7;
+    color: #dcdcdc; /* Softer gray for body text */
+    margin-bottom: 20px;
+}
+
+/* Content Structure */
+section {
+    margin-bottom: 60px; /* Add more space between sections */
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: "\2022"; /* Bullet Point */
+    color: #ffa500; /* Accent color for bullet */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Visual Elements */
+body {
+    background: linear-gradient(135deg, #121212, #181818); /* Subtle gradient */
+}
+
+section {
+    border-bottom: 1px solid #333; /* Divider between sections */
+    padding-bottom: 20px;
+}
+
+.hero-image img, .profile-image img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Interactive Elements */
+h2, h3, ul li {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h2:hover, h3:hover {
+    color: #ff8c00; /* Slightly darker accent color */
+    transform: translateX(10px); /* Move right on hover */
+}
+
+ul li:hover {
+    color: #ff8c00; /* Slightly darker accent color */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Button Consistency */
+.btn {
+    background: #ffa500;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #ff8c00;
+    transform: scale(1.1);
+}
