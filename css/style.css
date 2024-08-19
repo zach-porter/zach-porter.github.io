@@ -218,3 +218,27 @@ section {
     background-color: #ff8c00;
     transform: scale(1.1);
 }
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    padding: 20px;
+}
+
+.profile-image {
+    flex: 0 0 150px; /* Adjust the size of the image */
+    margin-right: 20px;
+}
+
+.profile-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.about-content {
+    flex: 1;
+}
