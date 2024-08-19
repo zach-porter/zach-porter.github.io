@@ -9,11 +9,6 @@ body {
 }
 
 /* Navigation Bar */
-nav {
-    position: relative;
-    z-index: 3; /* Ensure the nav is above the header overlay */
-}
-
 nav ul {
     display: flex;
     justify-content: center;
@@ -32,50 +27,36 @@ nav ul li a {
     text-decoration: none;
     font-weight: 700;
 }
-/* Header */
-header {
-    position: relative;
-    height: 100vh;
-    background: url('../assets/Selfie.jpeg') no-repeat center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    color: white;
-    text-align: center;
+
+/* Hero Section */
+.hero-section {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    height: 80vh;
+    background-color: #181818;
 }
 
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    z-index: 1;
+.hero-content {
+    flex: 1;
+    padding-right: 20px;
 }
 
-.header-content {
-    position: relative;
-    z-index: 2;
-}
-
-header h1 {
-    font-size: 4em;
-    margin-bottom: 10px;
+.hero-content h1 {
+    font-size: 3em;
+    color: #ffa500;
+    margin-bottom: 20px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-header p {
+.hero-content p {
     font-size: 1.2em;
     max-width: 600px;
-    margin: 20px auto;
+    margin-bottom: 20px;
 }
 
-.btn {
+.hero-content .btn {
     background: #ffa500;
     color: white;
     padding: 15px 30px;
@@ -85,48 +66,24 @@ header p {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.btn:hover {
+.hero-content .btn:hover {
     background-color: #ff8c00;
     transform: scale(1.1);
 }
 
-/* Main Content */
-main {
-    padding: 20px;
-    background: #181818;
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
 }
 
-main h1 {
-    color: #ffa500;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-main p {
-    font-size: 1.1em;
-    margin-bottom: 30px;
-}
-
-.project {
-    background-color: #292929;
+.hero-image img {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-bottom: 30px;
-    padding: 20px;
-    transition: transform 0.3s ease;
-}
-
-.project h2 {
-    color: #ffa500;
-    margin-bottom: 10px;
-}
-
-.project p {
-    color: #ccc;
-}
-
-.project:hover {
-    transform: translateY(-5px);
 }
 
 /* Footer */
@@ -145,6 +102,6 @@ footer {
     to { opacity: 1; }
 }
 
-header h1, header p, .btn {
+.hero-content h1, .hero-content p, .btn {
     animation: fadeIn 2s ease-in-out;
 }
