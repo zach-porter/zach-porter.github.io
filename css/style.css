@@ -1,61 +1,14 @@
 /* General Styles */
-body, html {
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    background: #121212;
+    color: #f4f4f4;
 }
 
-/* Basic Section Styling */
-section {
-    padding: 100px 20px;
-    min-height: 100vh; /* Ensure each section takes full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-/* Section Styles */
-
-/* Light Section */
-.section-light {
-    background-color: #f4f4f4; /* Light gray background */
-    color: #333; /* Dark text color */
-}
-
-/* Dark Section */
-.section-dark {
-    background-color: #333; /* Dark gray background */
-    color: #f4f4f4; /* Light text color */
-}
-
-/* Blue Section */
-.section-blue {
-    background-color: #0044cc; /* Blue background */
-    color: #ffffff; /* White text color */
-}
-
-/* Green Section */
-.section-green {
-    background-color: #008000; /* Green background */
-    color: #ffffff; /* White text color */
-}
-
-/* Red Section (Optional) */
-.section-red {
-    background-color: #ff0000; /* Red background */
-    color: #ffffff; /* White text color */
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #222; /* Dark gray background */
-    color: white;
-}
-
-/* Navigation Styles */
+/* Navigation Bar */
 nav ul {
     display: flex;
     justify-content: center;
@@ -70,14 +23,93 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffa500; /* Accent color for links */
+    color: #ffa500; /* Updated accent color */
     text-decoration: none;
     font-weight: 700;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    height: 80vh;
+    background-color: #181818;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: #ffa500;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    background: #ffa500;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: #ff8c00;
+    transform: scale(1.1);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero-content h1, .hero-content p, .btn {
+    animation: fadeIn 2s ease-in-out;
 }
 
 /* Typography Enhancements */
 h1, h2, h3 {
     font-weight: 700;
+    color: #ffa500;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
@@ -97,23 +129,15 @@ h3 {
 
 p {
     line-height: 1.7;
+    color: #dcdcdc; /* Softer gray for body text */
     margin-bottom: 20px;
 }
 
-/* Hover Effects */
-h2, h3, ul li {
-    transition: color 0.3s ease, transform 0.3s ease;
+/* Content Structure */
+section {
+    margin-bottom: 60px; /* Add more space between sections */
 }
 
-h2:hover, h3:hover {
-    transform: translateX(10px); /* Move right on hover */
-}
-
-ul li:hover {
-    color: #ff8c00; /* Slightly darker accent color on hover */
-}
-
-/* Bullet Points */
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -134,7 +158,51 @@ ul li::before {
     top: 0;
 }
 
-/* Button Styles */
+/* Visual Elements */
+body {
+    background: linear-gradient(135deg, #121212, #181818); /* Subtle gradient */
+}
+
+section {
+    border-bottom: 1px solid #333; /* Divider between sections */
+    padding-bottom: 20px;
+}
+
+.hero-image img, .profile-image img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Interactive Elements */
+h2, h3, ul li {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h2:hover, h3:hover {
+    color: #ff8c00; /* Slightly darker accent color */
+    transform: translateX(10px); /* Move right on hover */
+}
+
+ul li:hover {
+    color: #ff8c00; /* Slightly darker accent color */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Button Consistency */
 .btn {
     background: #ffa500;
     color: white;
@@ -151,45 +219,26 @@ ul li::before {
     transform: scale(1.1);
 }
 
-/* Animation for Sections */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    padding: 20px;
 }
 
-section {
-    animation: fadeInUp 1s ease-in-out;
+.profile-image {
+    flex: 0 0 150px; /* Adjust the size of the image */
+    margin-right: 20px;
 }
 
-/* Blue Background for Specific Pages */
-.blue-background {
-    background-color: #0000ff; /* Bright blue background */
-    color: #ffffff; /* White text */
+.profile-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.blue-background h1, .blue-background h2, .blue-background h3, .blue-background p, .blue-background ul li {
-    color: #ffffff; /* Ensures all text elements are white */
-}
-
-.blue-background a {
-    color: #ffa500; /* Accent color for links */
-}
-
-.blue-background a:hover {
-    color: #ff8c00; /* Hover color for links */
-}
-
-.blue-background .btn {
-    background-color: #ffa500; /* Button background */
-    color: white;
-}
-
-.blue-background .btn:hover {
-    background-color: #ff8c00;
+.about-content {
+    flex: 1;
 }
