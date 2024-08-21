@@ -41,13 +41,17 @@
     <script>
        document.querySelectorAll('nav ul li a').forEach(anchor => {
           anchor.addEventListener('click', function(e) {
-             e.preventDefault();
-             document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-             });
+             // Check if the href starts with '#', meaning it's a section on the same page
+             if (this.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                   behavior: 'smooth'
+                });
+             } 
+             // If it's a link to a different page, we let it navigate normally
           });
        });
     </script>
-
 </body>
 </html>
+
