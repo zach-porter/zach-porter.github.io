@@ -254,3 +254,44 @@ section {
     opacity: 1;
     transform: translateY(0);
 }
+
+section {
+    padding: 100px 20px;
+    min-height: 100vh; /* Ensure each section takes full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Section Styles */
+
+/* Light Section */
+.section-light {
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+/* Dark Section */
+.section-dark {
+    background-color: #333; /* Dark gray background */
+    color: #f4f4f4; /* Light text color */
+}
+
+/* Blue Section */
+.section-blue {
+    background-color: #0044cc; /* Blue background */
+    color: #ffffff; /* White text color */
+}
+
+/* Green Section */
+.section-green {
+    background-color: #008000; /* Green background */
+    color: #ffffff; /* White text color */
+}
+
+/* Red Section (Optional) */
+.section-red {
+    background-color: #ff0000; /* Red background */
+    color: #ffffff; /* White text color */
+}
