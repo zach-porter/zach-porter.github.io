@@ -12,13 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     document.querySelector('#intro h1').textContent = `${greeting}, Welcome to My Portfolio`;
-});
 
-document.addEventListener("DOMContentLoaded", function() {
     const faders = document.querySelectorAll('.fade-in');
 
     const appearOptions = {
-        threshold: 0.1, // Adjust this to control when the fade-in effect triggers
+        threshold: 0.1, 
         rootMargin: "0px 0px -100px 0px"
     };
 
@@ -28,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             } else {
                 entry.target.classList.add('show');
-                appearOnScroll.unobserve(entry.target); // Optional: Unobserve after it has appeared
+                appearOnScroll.unobserve(entry.target);
             }
         });
     }, appearOptions);
@@ -37,4 +35,3 @@ document.addEventListener("DOMContentLoaded", function() {
         appearOnScroll.observe(fader);
     });
 });
-
