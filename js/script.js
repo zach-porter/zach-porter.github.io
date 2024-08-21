@@ -14,31 +14,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector('.hero-content h1').textContent = `${greeting}, Welcome to My Portfolio`;
 
-    // Fade-in effect on scroll
-    const faders = document.querySelectorAll('.fade-in');
-    const sliders = document.querySelectorAll('.slide-in');
+    // Combined Intersection Observer for fade-in, slide-in, and fade-in-out effects
+    const elementsToObserve = document.querySelectorAll('.fade-in, .slide-in, .fade-in-out');
 
-    const appearOptions = {
+    const observerOptions = {
         threshold: 0.5,
         rootMargin: "0px 0px -100px 0px"
     };
 
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    const observer = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
+            if (entry.isIntersecting) {
                 entry.target.classList.add('show');
-                observer.unobserve(entry.target); // Unobserve after it has appeared
+                entry.target.classList.remove('fade-out');
+                observer.unobserve(entry.target); // Optional: Unobserve after it has appeared
+            } else if (entry.target.classList.contains('fade-in-out')) {
+                entry.target.classList.add('fade-out');
+                entry.target.classList.remove('show');
             }
         });
-    }, appearOptions);
+    }, observerOptions);
 
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    });
-
-    sliders.forEach(slider => {
-        appearOnScroll.observe(slider);
+    elementsToObserve.forEach(element => {
+        observer.observe(element);
     });
 });
