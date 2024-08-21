@@ -299,7 +299,7 @@ section {
 /* Parallax Effect */
 .parallax {
     position: relative;
-    background: url('assets/BG1.jpeg') no-repeat center center;
+    background: url('https://zach-porter.github.io/assets/BG1.jpeg') no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
