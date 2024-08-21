@@ -38,16 +38,16 @@
         <p>© 2024 Zachary Porter. All rights reserved.</p>
     </footer>
     <script src="js/script.js"></script>
-<script>
-   document.querySelectorAll('nav ul li a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-         e.preventDefault();
-         document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-         });
-      });
-   });
-</script>
+    <script>
+       document.querySelectorAll('nav ul li a').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+             e.preventDefault();
+             document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+             });
+          });
+       });
+    </script>
 
 </body>
 </html>
