@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const faders = document.querySelectorAll('.fade-in');
 
     const appearOptions = {
-        threshold: 0.5, // Adjust this to control when the fade-in effect triggers
+        threshold: 0.1, // Adjust this to control when the fade-in effect triggers
         rootMargin: "0px 0px -100px 0px"
     };
 
