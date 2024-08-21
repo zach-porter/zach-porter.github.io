@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Greeting based on time of day
     const now = new Date();
     const hour = now.getHours();
     let greeting;
@@ -11,12 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
         greeting = 'Good Evening';
     }
 
-    document.querySelector('#intro h1').textContent = `${greeting}, Welcome to My Portfolio`;
+    document.querySelector('.hero-content h1').textContent = `${greeting}, Welcome to My Portfolio`;
 
+    // Fade-in effect on scroll
     const faders = document.querySelectorAll('.fade-in');
 
     const appearOptions = {
-        threshold: 0.1, 
+        threshold: 0.1,
         rootMargin: "0px 0px -100px 0px"
     };
 
@@ -26,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             } else {
                 entry.target.classList.add('show');
-                appearOnScroll.unobserve(entry.target);
+                appearOnScroll.unobserve(entry.target); // Optional: Unobserve after it has appeared
             }
         });
     }, appearOptions);
