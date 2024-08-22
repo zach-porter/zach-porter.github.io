@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Zachary Porter</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -14,44 +16,81 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section id="about">
-            <h1>About Me</h1>
-            <p>Hello! I'm Zachary Porter, a Social Data Scientist with a passion for understanding and analyzing social dynamics through computational methods.</p>
-            <h2>Skills</h2>
-            <ul>
-                <li>Sociological Analysis</li>
-                <li>Computational Social Science</li>
-                <li>Qualitative and Quantitative Methods</li>
-                <li>Programming Languages: Python, R, Netlogo</li>
-                <li>Software: Gephi, Discourse Network Analyzer, Excel, R Studio</li>
-            </ul>
-            <h2>Academic Background</h2>
-            <p>I have completed an MSc in Social Data Science from University College Dublin, and an MSc in Comparative Social Change from Trinity College Dublin & University College Dublin. My undergraduate degree is a BA in Communication from Hope College.</p>
-            <p>Throughout my academic journey, I have developed a strong foundation in sociological analysis and computational techniques, allowing me to tackle complex social phenomena using both qualitative and quantitative approaches.</p>
+        <section class="about-section  ">
+            <div class="about-content">
+                <h1>About Me</h1>
+                <p> I'm Zachary Porter, a Social Data Scientist with a passion for understanding and analyzing social dynamics through computational methods.</p>
+            </div>
+            <div class="hero-image">
+                <img src="assets/Selfie.jpeg" alt="Hero Image">
+            </div>
+        </section>
+
+        <section class="parallax-1 fade-in-out">
+            <div class="parallax-overlay"></div> <!-- Overlay container -->
+            <div class="parallax-content">
+                <h2>My Journey</h2>
+                <p>My journey into social data science began with a curiosity for understanding the complex interactions within society...</p>
+                <h2>Technical Skills</h2>
+                <ul class="skills-list">
+                    <li>Programming Languages: Python, R, Netlogo</li>
+                    <li>Computational Social Science</li>
+                    <li>Qualitative and Quantitative Methods</li>
+                <h2>Software Proficiency</h2>
+                <ul class="skills-list">
+                    <li>Gephi</li>
+                    <li>Discourse Network Analyzer</li>
+                    <li>Excel</li>
+                    <li>R Studio</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="about-content collapsible-section">
+            <div class="about-content">
+                <h2>Academic Background</h2>
+            </div>
+            <div class="collapsible-section">
+                <button class="collapsible">MSc in Social Data Science - University College Dublin</button>
+                <div class="content">
+                    <p>During my MSc in Social Data Science, I focused on the intersection of sociology and data science...</p>
+                </div>
+            </div>
+            <div class="collapsible-section">
+                <button class="collapsible">MSc in Comparative Social Change - Trinity College Dublin & University College Dublin</button>
+                <div class="content">
+                    <p>My MSc in Comparative Social Change provided me with a robust understanding of global social challenges...</p>
+                </div>
+            </div>
+            <div class="collapsible-section">
+                <button class="collapsible">BA in Communication - Hope College</button>
+                <div class="content">
+                    <p>At Hope College, I developed a strong foundation in communication theory and practice...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call-to-Action -->
+        <section class="cta">
+            <h2>Explore More</h2>
+            <p>Interested in seeing how I apply my skills? <a href="portfolio.html" class="btn">Check out my portfolio</a> or <a href="blog.html" class="btn">Read my latest blog posts</a>.</p>
         </section>
     </main>
+
     <footer>
         <p>© 2024 Zachary Porter. All rights reserved.</p>
     </footer>
+
     <script src="js/script.js"></script>
-    <script>
-       document.querySelectorAll('nav ul li a').forEach(anchor => {
-          anchor.addEventListener('click', function(e) {
-             // Check if the href starts with '#', meaning it's a section on the same page
-             if (this.getAttribute('href').startsWith('#')) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                   behavior: 'smooth'
-                });
-             } 
-             // If it's a link to a different page, we let it navigate normally
-          });
-       });
-    </script>
 </body>
+
 </html>
+
+
 
