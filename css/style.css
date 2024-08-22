@@ -314,25 +314,58 @@ section {
     justify-content: center;
 }
 
-.parallax .content {
-    z-index: 0; /* Ensures text is above the overlay */
-    text-align: center;
-    color: white;
-    padding: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow to enhance text readability */
-}
-
-.parallax::before {
+.parallax .parallax-overlay {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.05); /* Dark overlay for better readability */
-    z-index: 1; /* Places the overlay between the background and content */
-    pointer-events: none; /* Ensures the overlay doesn't interfere with content interaction */
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    z-index: 1; /* Behind the text */
+    pointer-events: none;
 }
+
+.parallax .parallax-content {
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow to enhance text readability */
+}
+
+/* New parallax section with a different background */
+.parallax-new {
+    position: relative;
+    background: url('https://zach-porter.github.io/assets/BG2.jpeg') no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-new .parallax-overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1; 
+    pointer-events: none;
+}
+
+.parallax-new .parallax-content {
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
+}
+
 
 /* Blur-in effect */
 .blur-in {
