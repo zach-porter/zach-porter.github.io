@@ -654,7 +654,7 @@ section {
 #contact {
     display: flex;
     flex-direction: column;
-    background: url('assets/BGContact.webp') no-repeat center center fixed; /* Background image */
+    background: url('https://zach-porter.github.io/assets/BGContact.webp') no-repeat center center fixed; /* Background image */
     background-size: cover;
     padding: 60px 20px;
     color: #f4f4f4;
