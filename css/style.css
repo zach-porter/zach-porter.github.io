@@ -152,7 +152,7 @@ p {
 
 /* Content Structure */
 section {
-    margin-bottom: 60px; /* Add more space between sections */
+    margin-bottom: 10px; /* Add more space between sections */
 }
 
 ul {
@@ -715,4 +715,15 @@ section {
     color: #27ae60; /* Success message color */
     font-size: 1.2em;
     margin-top: 20px;
+}
+
+/* Styling specific to email link */
+.email-link {
+    color: #1fd2ff; /* Email link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.email-link:hover {
+    color: #05a3cb; /* Darker shade for hover effect */
+    text-decoration: underline; /* Add underline on hover */
 }
