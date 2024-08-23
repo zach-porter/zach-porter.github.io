@@ -62,12 +62,14 @@ nav ul li a {
     color: #ffa500;
     margin-bottom: 20px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    display: block;
 }
 
 .hero-content p {
     font-size: 1.2em;
     max-width: 600px;
     margin-bottom: 20px;
+    display: block;
 }
 
 .hero-content .btn {
@@ -99,7 +101,6 @@ nav ul li a {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
 /* Footer */
 footer {
     text-align: center;
@@ -134,6 +135,7 @@ h1 {
 h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    display: block
 }
 
 h3 {
@@ -145,6 +147,7 @@ p {
     line-height: 1.7;
     color: #dcdcdc; /* Softer gray for body text */
     margin-bottom: 20px;
+    display: block;
 }
 
 /* Content Structure */
@@ -236,10 +239,12 @@ section {
 /* About Section */
 .about-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
     height: 40vh;
+    width: 100%;
     background-color: #181818;
 }
 
@@ -274,21 +279,6 @@ section {
 .about-content .btn:hover {
     background-color: #ff8c00;
     transform: scale(1.1);
-}
-
-.about-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-}
-
-.about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .profile-image {
@@ -363,7 +353,7 @@ section {
 }
 
 /* Parallax Effect */
-.parallax, .parallax-new, .parallax-1, .parallax-2, .parallax-3 {
+.parallax, .parallax-new, .parallax-1, .parallax-2, .parallax-3, .parallax-4, .parallax-5, .parallax-6 {
     position: relative;
     background-attachment: fixed;
     background-size: cover;
@@ -373,7 +363,7 @@ section {
     justify-content: center;
 }
 
-.parallax .parallax-overlay, .parallax-new .parallax-overlay, .parallax-1 .parallax-overlay, .parallax-2 .parallax-overlay, .parallax-3 .parallax-overlay {
+.parallax .parallax-overlay, .parallax-new .parallax-overlay, .parallax-1 .parallax-overlay, .parallax-2 .parallax-overlay, .parallax-3 .parallax-overlay, .parallax-4 .parallax-overlay, .parallax-5 .parallax-overlay, .parallax-6 .parallax-overlay {
     content: "";
     position: absolute;
     top: 0;
@@ -384,7 +374,7 @@ section {
     pointer-events: none;
 }
 
-.parallax .parallax-content, .parallax-new .parallax-content, .parallax-1 .parallax-content, .parallax-2 .parallax-content, .parallax-3 .parallax-content {
+.parallax .parallax-content, .parallax-new .parallax-content, .parallax-1 .parallax-content, .parallax-2 .parallax-content, .parallax-3 .parallax-content, .parallax-4 .parallax-content, .parallax-5 .parallax-content, .parallax-6 .parallax-content {
     z-index: 2;
     text-align: center;
     color: white;
@@ -413,7 +403,7 @@ section {
 }
 
 .parallax-1 .parallax-overlay {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .parallax-2 {
@@ -421,7 +411,7 @@ section {
 }
 
 .parallax-2 .parallax-overlay {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .parallax-3 {
@@ -429,9 +419,32 @@ section {
 }
 
 .parallax-3 .parallax-overlay {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
 }
 
+.parallax-4 {
+    background: url('https://zach-porter.github.io/assets/BG6.jpeg') no-repeat center center;
+}
+
+.parallax-4 .parallax-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.parallax-5 {
+    background: url('https://zach-porter.github.io/assets/BG7.jpeg') no-repeat center center;
+}
+
+.parallax-5 .parallax-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}  
+
+.parallax-6 {
+    background: url('https://zach-porter.github.io/assets/BG8.jpeg') no-repeat center center;
+}
+
+.parallax-6 .parallax-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
 
 /* Blur-in effect */
 .blur-in {
@@ -580,9 +593,13 @@ section {
     text-decoration: none;
     border-radius: 5px;
     margin: 0 5px;
-    display: inline-block;
+    display: block;/* vs inline-block */
 }
 
 .cta .btn:hover {
     background-color: #2980b9;
+}
+
+.cta p {
+    margin-bottom: 10px;
 }
