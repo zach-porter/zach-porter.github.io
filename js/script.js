@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Collapsible sections
     var collapsibles = document.querySelectorAll('.collapsible');
 
     collapsibles.forEach(function(collapsible) {
@@ -84,5 +85,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 content.style.display = "block";
             }
         });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const elementsToObserve = document.querySelectorAll('.fade-in, .slide-in, .fade-in-out');
+
+    const observerOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -100px 0px"
+    };
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                entry.target.classList.remove('fade-out');
+                if (!entry.target.classList.contains('fade-in-out')) {
+                    observer.unobserve(entry.target); // Unobserve non-fade-in-out elements
+                }
+            } else if (entry.target.classList.contains('fade-in-out')) {
+                entry.target.classList.add('fade-out');
+                entry.target.classList.remove('show');
+            }
+        });
+    }, observerOptions);
+
+    elementsToObserve.forEach(element => {
+        observer.observe(element);
     });
 });

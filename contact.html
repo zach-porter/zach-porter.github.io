@@ -19,10 +19,10 @@
         </nav>
     </header>
     <main>
-        <section id="contact">
+        <section id="contact" class="fade-in-out">
             <h1>Contact Me</h1>
             <p>If you would like to get in touch, please use the form below or reach out via email.</p>
-            <form action="https://formspree.io/f/{your_form_id}" method="POST">
+            <form action="https://formspree.io/f/{your_form_id}" method="POST" id="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -34,6 +34,9 @@
 
                 <button type="submit">Send</button>
             </form>
+            <div id="success-message" style="display:none;">
+                <p>Thank you! Your message has been sent successfully.</p>
+            </div>
             <p>Alternatively, you can reach me at <a href="mailto:zachjporter89@gmail.com">zachjporter89@gmail.com</a>.</p>
         </section>
     </main>
@@ -41,5 +44,27 @@
         <p>© 2024 Zachary Porter. All rights reserved.</p>
     </footer>
     <script src="js/script.js"></script>
+    <script>
+        // JavaScript for showing the success message after form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById('success-message').style.display = 'block';
+                    this.reset(); // Clear the form
+                } else {
+                    alert('Oops! There was a problem submitting your form');
+                }
+            }).catch(error => {
+                alert('Oops! There was a problem submitting your form');
+            });
+        });
+    </script>
 </body>
 </html>
