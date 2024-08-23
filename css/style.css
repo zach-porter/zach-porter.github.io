@@ -471,7 +471,7 @@ section {
 /* Blog Section */
 .blog-section {
     padding: 60px 20px;
-    background-color: #f4f4f4;
+    background-color: #260b52;
     color: #333;
     text-align: center;
 }
@@ -486,7 +486,7 @@ section {
 .blog-snippet {
     max-width: 800px;
     padding: 20px;
-    background: #fff;
+    background: #000000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: left;
