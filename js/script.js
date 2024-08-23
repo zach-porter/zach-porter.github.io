@@ -115,3 +115,23 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 });
+// JavaScript for showing the success message after form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById('success-message').style.display = 'block';
+                    this.reset(); // Clear the form
+                } else {
+                    alert('Oops! There was a problem submitting your form');
+                }
+            }).catch(error => {
+                alert('Oops! There was a problem submitting your form');
+            });
+        });
