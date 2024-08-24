@@ -727,3 +727,15 @@ section {
     color: #05a3cb; /* Darker shade for hover effect */
     text-decoration: underline; /* Add underline on hover */
 }
+
+/* Logo styling */
+.logo-container {
+    text-align: center; /* Center-align the logo */
+    padding: 10px 0; /* Optional: Adjust spacing around the logo */
+}
+
+.logo {
+    max-height: 50px; /* Adjust the size of the logo */
+    max-width: 100px; /* Prevent the logo from being too wide */
+    object-fit: contain; /* Maintain aspect ratio */
+}
