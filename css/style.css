@@ -13,8 +13,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center align the content */
-    padding: 20px;
-    gap: 40px; /* Space between sections */
 }
 
 /* Specific styling for the profile photo section */
@@ -26,6 +24,7 @@ main {
 nav ul {
     display: flex;
     justify-content: center;
+    align-items: center;
     list-style: none;
     background: #333;
     padding: 15px;
@@ -729,13 +728,14 @@ section {
 }
 
 /* Logo styling */
-.logo-container {
-    text-align: center; /* Center-align the logo */
-    padding: 10px 0; /* Optional: Adjust spacing around the logo */
-}
 
 .logo {
     max-height: 50px; /* Adjust the size of the logo */
     max-width: 100px; /* Prevent the logo from being too wide */
     object-fit: contain; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align the logo vertically */
+}
+
+.logo-item {
+    margin-right: 20px; /* Space between the logo and next nav item */
 }
