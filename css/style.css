@@ -504,6 +504,12 @@ section {
     border-radius: 8px;
 }
 
+.blog-post p {
+    color: #000000; /* Set specific paragraph text color to black */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
 .blog-snippets {
     flex: 1; /* Takes up less space compared to main post */
     display: flex;

@@ -24,8 +24,8 @@
         "content": "OpenAI’s claims for a commitment to understanding and mitigating AI risks are rooted in an empirical and scientific approach. These claims should be considered alongside the relatively frequent departures of AI safety workers from the corporation. While benchmarks like SWE-bench play a crucial role in safety and alignment, they are only part of the solution. OpenAI advocates for an ecosystem-wide effort to develop, refine, and validate high-quality benchmarks."
       },
       {
-        "heading": "Helpful Videos and Papers",
-        "content": "Lastly, I want to leave a section with a few videos and papers that may be beneficial for understanding the technical aspects of LLMs: Andrej Karpathy's 60-minute video on LLMs, 3Blue1Brown's 10-minute video on 'What is a GPT?', and Ava Amini's 60-minute lecture on Neural Networks, Transformers, and Attention."
+        "heading": "Helpful Videos",
+        "content": "Lastly, I want to leave a section with a few videos that may be beneficial for understanding the technical aspects of LLMs: check out Andrej Karpathy's 60-minute video on LLMs at https://youtu.be/zjkBMFhNj_g?si=BO68Z-_wsCFFtWo4, 3Blue1Brown's 10-minute video on 'What is a GPT?'at https://youtu.be/wjZofJX0v4M?si=U1i4qDgUIMY6i_vz, and Ava Amini's 60-minute lecture on Neural Networks, Transformers, and Attention at https://youtu.be/dqoEU9Ac3ek?si=Gi5jiAqGITRqmVrY."
       }
     ],
     "image": "https://zach-porter.github.io/assets/blog-image-1.webp"
