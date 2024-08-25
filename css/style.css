@@ -479,32 +479,42 @@ section {
     padding: 60px 20px;
     background-color: #f4f4f4;
     color: #333;
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.blog-main-content {
+    display: flex;
+    flex-direction: row; /* Arrange children in a row */
+    justify-content: space-between; /* Space between main post and snippets */
+    width: 100%;
+    max-width: 1200px; /* Adjust based on your preference */
+    gap: 20px; /* Space between the main post and the snippets */
+}
+
+.blog-post {
+    flex: 3; /* Takes up more space compared to snippets */
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .blog-snippets {
+    flex: 1; /* Takes up less space compared to main post */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 40px;
+    gap: 20px; /* Space between snippets */
 }
 
 .blog-snippet {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 800px;
     padding: 20px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
 }
 
 .blog-image {
@@ -551,6 +561,16 @@ section {
 .blog-snippet .btn:hover {
     background-color: #002288;
     transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .blog-main-content {
+        flex-direction: column;
+    }
+
+    .blog-snippets {
+        margin-top: 20px;
+    }
 }
 
 /* Profile Photo */
@@ -718,12 +738,12 @@ section {
 
 /* Styling specific to email link */
 .email-link {
-    color: #1fd2ff; /* Email link color */
+    color: #00ffee; /* Email link color */
     text-decoration: none; /* Remove underline */
 }
 
 .email-link:hover {
-    color: #05a3cb; /* Darker shade for hover effect */
+    color: #03afcd; /* Darker shade for hover effect */
     text-decoration: underline; /* Add underline on hover */
 }
 
@@ -731,11 +751,40 @@ section {
 
 .logo {
     max-height: 50px; /* Adjust the size of the logo */
-    max-width: 100px; /* Prevent the logo from being too wide */
+    max-width: auto; /* Prevent the logo from being too wide */
     object-fit: contain; /* Maintain aspect ratio */
     vertical-align: middle; /* Align the logo vertically */
 }
 
 .logo-item {
-    margin-right: 20px; /* Space between the logo and next nav item */
+    margin-right: 20px; /* Aligns the rest of the menu items to the right */
+}
+
+.footer-logo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer-logo-img {
+    max-height: 40px; /* Smaller size for the footer */
+    width: auto;
+    opacity: 0.8; /* Slight transparency */
+}
+
+.about-page-logo {
+    max-height: 80px;
+    width: auto;
+    margin-bottom: 20px; /* Adds space between logo and text */
+}
+
+.contact-page-logo {
+    max-height: 80px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.blog-post-logo {
+    max-height: 60px;
+    width: auto;
+    margin-bottom: 20px;
 }

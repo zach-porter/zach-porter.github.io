@@ -135,3 +135,46 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Oops! There was a problem submitting your form');
             });
         });
+
+fetch('blog-posts.json')
+    .then(response => response.json())
+    .then(posts => {
+        const snippetsContainer = document.querySelector('.blog-snippets');
+        
+        // Iterate over each post to create snippets
+        posts.forEach(post => {
+            const snippetElement = document.createElement('article');
+            snippetElement.classList.add('blog-snippet', 'fade-in-out');
+            
+            // Create the snippet with the title, image, and a short description
+            snippetElement.innerHTML = `
+                <img src="${post.image}" alt="${post.title}" class="blog-image">
+                <h2><a href="#" class="blog-link" data-title="${post.title}" data-intro="${post.intro}" data-sections='${JSON.stringify(post.sections)}'>${post.title}</a></h2>
+                <p>${post.intro}</p>
+                <a href="#" class="btn" data-title="${post.title}" data-intro="${post.intro}" data-sections='${JSON.stringify(post.sections)}'>Read More</a>
+            `;
+            snippetsContainer.appendChild(snippetElement);
+        });
+
+        // Event listener to handle full post content display
+        document.querySelectorAll('.btn, .blog-link').forEach(button => {
+            button.addEventListener('click', event => {
+                event.preventDefault();
+                
+                // Get the title, intro, and sections data
+                const title = event.target.dataset.title;
+                const intro = event.target.dataset.intro;
+                const sections = JSON.parse(event.target.dataset.sections);
+
+                // Create the HTML content for the full blog post
+                let fullContent = `<h1>${title}</h1><p>${intro}</p>`;
+                sections.forEach(section => {
+                    fullContent += `<h2>${section.heading}</h2><p>${section.content}</p>`;
+                });
+
+                // Display the full content in the main blog post area
+                const mainBlogPost = document.querySelector('.blog-post');
+                mainBlogPost.innerHTML = fullContent;
+            });
+        });
+    });

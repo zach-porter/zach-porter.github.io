@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="icon" href="https://zach-porter.github.io/assets/logo.webp" type="image/webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Zachary Porter</title>
+    <title>Contact - Zachary Porter | Social Data Scientist</title>
+    <meta name="description" content="Get in touch with Zachary Porter, a Social Data Scientist specializing in sociological analysis, computational social science, and generative AI. Reach out for collaboration or inquiries.">
+    <meta name="keywords" content="Contact, Zachary Porter, Social Data Scientist, Collaboration, Inquiry, Generative AI, Computational Social Science">
+    <link rel="canonical" href="https://zach-porter.github.io/contact.html">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Zachary Porter",
+            "url": "https://zach-porter.github.io/",
+            "image": "https://zach-porter.github.io/assets/Selfie2.jpeg",
+            "jobTitle": "Social Data Scientist",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "mailto:zachjporter89@gmail.com",
+                "contactType": "Customer Support"
+            },
+            "sameAs": [
+                "https://substack.com/@zachjporter",
+                "https://www.linkedin.com/in/zachary-porter"
+            ]
+        }
+    </script>
 </head>
+
 <body>
     <header>
         <nav>
@@ -23,12 +50,12 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <section id="contact" class="fade-in-out">
             <h1>Contact Me</h1>
-            <p>If you would like to get in touch, please use the form below or reach out via email.</p>
-            <form action="https://formspree.io/f/{your_form_id}" method="POST" id="contact-form">
+            <p>If you would like to get in touch, please use the form or email below.</p>
+            <form action="https://formspree.io/f/mjkbpaya" method="POST" id="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -40,15 +67,24 @@
 
                 <button type="submit">Send</button>
             </form>
+
             <div id="success-message" style="display:none;">
-                <p>Thank you! Your message has been sent successfully.</p>
+                <p>Thank you! Your message has been sent successfully. I will get back to you soon.</p>
             </div>
+
             <p>Alternatively, you can reach me at <a href="mailto:zachjporter89@gmail.com" class="email-link">zachjporter89@gmail.com</a>.</p>
         </section>
     </main>
+
     <footer>
+        <div class="footer-logo">
+            <img src="https://zach-porter.github.io/assets/logo.webp" alt="Zachary Porter Logo" class="footer-logo-img">
+        </div>
         <p>© 2024 Zachary Porter. All rights reserved.</p>
     </footer>
+
     <script src="js/script.js"></script>
 </body>
+
 </html>
+
