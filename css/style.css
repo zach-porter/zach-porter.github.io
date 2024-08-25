@@ -499,6 +499,7 @@ section {
     flex: 3; /* Takes up more space compared to snippets */
     padding: 20px;
     background: #ffffff;
+    color: #000000; /* Set text color to black */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
