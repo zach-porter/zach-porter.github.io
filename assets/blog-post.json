@@ -27,20 +27,20 @@
         "heading": "Helpful Videos and Papers",
         "content": "Lastly, I want to leave a section with a few videos and papers that may be beneficial for understanding the technical aspects of LLMs: Andrej Karpathy's 60-minute video on LLMs, 3Blue1Brown's 10-minute video on 'What is a GPT?', and Ava Amini's 60-minute lecture on Neural Networks, Transformers, and Attention."
       }
-    "image": ""
-    ]
-  }
+    ],
+    "image": "https://zach-porter.github.io/assets/blog-image-1.webp"
+  },
 {
   "title": "The Newly Released AI Risk Repository",
-  "snippet": "A New Framework for Discussing and Navigating AI's Risk and Safety Measures",
+  "intro": "A New Framework for Discussing and Navigating AI's Risk and Safety Measures",
   "content": "<p>Full content of the post goes here...</p>",
-  "image": "assets/Blog3.jpeg"
+  "image": "https://zach-porter.github.io/assets/Blog3.jpeg"
 },
 {
   "title": "The AI Agents Learning to Hack",
-  "snippet": "New Research from this year: training AI Agents to Hack and defending against Hacking",
+  "intro": "New Research from this year: training AI Agents to Hack and defending against Hacking",
   "content": "<p>Full content of the post goes here...</p>",
-  "image": "assets/Blog2.jpeg"
+  "image": "https://zach-porter.github.io/assets/Blog2.jpeg"
 }
 ]
   
