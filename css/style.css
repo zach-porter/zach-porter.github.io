@@ -393,7 +393,7 @@ section {
 }
 
 .parallax .parallax-overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .parallax-new {
@@ -409,7 +409,7 @@ section {
 }
 
 .parallax-1 .parallax-overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .parallax-2 {
@@ -417,7 +417,7 @@ section {
 }
 
 .parallax-2 .parallax-overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .parallax-3 {
@@ -425,7 +425,7 @@ section {
 }
 
 .parallax-3 .parallax-overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .parallax-4 {
@@ -433,7 +433,7 @@ section {
 }
 
 .parallax-4 .parallax-overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .parallax-5 {
@@ -441,7 +441,7 @@ section {
 }
 
 .parallax-5 .parallax-overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
 }  
 
 .parallax-6 {
@@ -449,7 +449,7 @@ section {
 }
 
 .parallax-6 .parallax-overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 /* Blur-in effect */
@@ -687,6 +687,7 @@ section {
     text-align: center;
     border-radius: 8px;
 }
+
 
 #contact h1 {
     font-size: 2.5em;
