@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Fetching main blog content
     fetch('https://zach-porter.github.io/assets/blog-post.json')
         .then(response => {
             if (!response.ok) {
@@ -110,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Create the HTML content for the full blog post
                 let fullContent = `<h1>${mainPost.title}</h1><p>${mainPost.intro}</p>`;
                 mainPost.sections.forEach(section => {
-                    fullContent += `<h2>${section.heading}</h2><p>${section.content}</p>`;
+                    fullContent += `<h2>${section.heading}</h2><p style="color: black;">${section.content}</p>`; // Ensure content is black
                 });
 
                 // Display the full content in the main blog post area
@@ -124,4 +125,22 @@ document.addEventListener('DOMContentLoaded', function() {
             const mainBlogPostContainer = document.getElementById('main-blog-post');
             mainBlogPostContainer.innerHTML = '<p>Failed to load the blog post. Please try again later.</p>';
         });
+
+    // Hamburger menu functionality
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburgerMenu && navLinks) {
+        hamburgerMenu.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+        });
+    }
+});
+
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        const navLinks = document.querySelector('.nav-links');
+        if (navLinks.classList.contains('show')) {
+            navLinks.classList.remove('show');
+        }
+    }
 });

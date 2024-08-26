@@ -21,25 +21,104 @@ main {
 }
 
 /* Navigation Bar */
+/* General Header Styles */
+header {
+    width: 100%;
+    background-color: #333; /* Or whatever background color you prefer */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation Styles */
 nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     list-style: none;
-    background: #333;
-    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 0;
+    padding: 0;
 }
 
 nav ul li {
     margin-right: 20px;
 }
 
-nav ul li a {
-    color: #ffa500; /* Updated accent color */
+nav ul li:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+}
+
+nav ul a {
+    color: #fff; /* Change to your preferred text color */
     text-decoration: none;
     font-weight: 700;
+    padding: 10px 15px;
 }
+
+/* Logo Item */
+.logo-item {
+    flex: 1; /* Logo takes some space */
+}
+
+.logo {
+    max-width: 120px;
+    height: auto;
+}
+
+/* Hamburger Menu Icon */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    transition: max-height 0.5s ease-out;
+    max-height: 0; /* Collapsed by default */
+    overflow: hidden;
+}
+
+.nav-links.show {
+    max-height: 300px; /* Adjust as needed */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .logo {
+        max-width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu on small screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links by default on small screens */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show nav links when toggled */
+    }
+}
+
 
 /* Hero Section */
 .hero-section {
