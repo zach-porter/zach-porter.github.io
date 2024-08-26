@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Greeting based on time of day
     const now = new Date();
     const hour = now.getHours();
@@ -21,11 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const elementsToObserve = document.querySelectorAll('.fade-in, .slide-in, .fade-in-out');
     const observerOptions = {
         threshold: 0.2,
-        rootMargin: "0px 0px -100px 0px"
+        rootMargin: '0px 0px -100px 0px',
     };
 
-    const observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
+    const observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('show');
                 entry.target.classList.remove('fade-out');
@@ -39,17 +39,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    elementsToObserve.forEach(element => {
+    elementsToObserve.forEach((element) => {
         observer.observe(element);
     });
 
     // Smooth scroll for internal links
-    document.querySelectorAll('nav ul li a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+    document.querySelectorAll('nav ul li a').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
             if (this.getAttribute('href').startsWith('#')) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                    behavior: 'smooth',
                 });
             }
         });
@@ -57,14 +57,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Collapsible sections functionality
     const collapsibles = document.querySelectorAll('.collapsible');
-    collapsibles.forEach(function(collapsible) {
-        collapsible.addEventListener('click', function() {
+    collapsibles.forEach(function (collapsible) {
+        collapsible.addEventListener('click', function () {
             this.classList.toggle('active');
             const content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
             } else {
-                content.style.display = "block";
+                content.style.display = 'block';
             }
         });
     });
@@ -72,36 +72,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact form submission
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
+        contactForm.addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent default form submission
             fetch(this.action, {
                 method: 'POST',
                 body: new FormData(this),
                 headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    document.getElementById('success-message').style.display = 'block';
-                    this.reset(); // Clear the form
-                } else {
+                    Accept: 'application/json',
+                },
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        document.getElementById('success-message').style.display = 'block';
+                        this.reset(); // Clear the form
+                    } else {
+                        alert('Oops! There was a problem submitting your form');
+                    }
+                })
+                .catch((error) => {
                     alert('Oops! There was a problem submitting your form');
-                }
-            }).catch(error => {
-                alert('Oops! There was a problem submitting your form');
-            });
+                });
         });
     }
 
     // Fetching main blog content
     fetch('https://zach-porter.github.io/assets/blog-post.json')
-        .then(response => {
+        .then((response) => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
             return response.json();
         })
-        .then(posts => {
+        .then((posts) => {
             console.log(posts); // Log the fetched posts to the console for debugging
             const mainBlogPostContainer = document.getElementById('main-blog-post');
 
@@ -110,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Create the HTML content for the full blog post
                 let fullContent = `<h1>${mainPost.title}</h1><p>${mainPost.intro}</p>`;
-                mainPost.sections.forEach(section => {
+                mainPost.sections.forEach((section) => {
                     fullContent += `<h2>${section.heading}</h2><p style="color: black;">${section.content}</p>`; // Ensure content is black
                 });
 
@@ -120,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 mainBlogPostContainer.innerHTML = '<p>No posts available.</p>';
             }
         })
-        .catch(error => {
+        .catch((error) => {
             console.error('Error fetching the blog post data:', error);
             const mainBlogPostContainer = document.getElementById('main-blog-post');
             mainBlogPostContainer.innerHTML = '<p>Failed to load the blog post. Please try again later.</p>';
@@ -130,17 +132,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const navLinks = document.querySelector('.nav-links');
     if (hamburgerMenu && navLinks) {
-        hamburgerMenu.addEventListener('click', function() {
+        hamburgerMenu.addEventListener('click', function () {
             navLinks.classList.toggle('show');
         });
     }
-});
 
-window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-        const navLinks = document.querySelector('.nav-links');
-        if (navLinks.classList.contains('show')) {
-            navLinks.classList.remove('show');
+    // Additional script to hide .show class on desktop resize
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 768) {
+            if (navLinks.classList.contains('show')) {
+                navLinks.classList.remove('show');
+            }
         }
-    }
+    });
 });
