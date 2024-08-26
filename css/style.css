@@ -20,7 +20,6 @@ main {
     margin-bottom: 20px;
 }
 
-/* Navigation Bar */
 /* General Header Styles */
 header {
     width: 100%;
@@ -30,17 +29,9 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000;
-}
-
-/* General Header Styles */
-header {
-    width: 100%;
-    background-color: #333; /* Or whatever background color you prefer */
-    padding: 10px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Navigation Styles */
@@ -48,17 +39,12 @@ nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
     margin-right: 20px;
-}
-
-nav ul li:last-child {
-    margin-right: 0; /* Remove margin for the last item */
 }
 
 nav ul a {
@@ -70,47 +56,26 @@ nav ul a {
 
 /* Logo Item */
 .logo-item {
-    flex: 1; /* Logo takes some space */
-}
-
-.logo {
-    max-width: 120px;
-    height: auto;
+    margin-right: auto; /* Keeps logo on the left and other items on the right */
 }
 
 /* Hamburger Menu Icon */
 .hamburger-menu {
-    display: none; /* Hidden by default for larger screens */
+    display: none; /* Hidden by default */
     font-size: 24px;
     color: #fff;
     cursor: pointer;
-    margin-left: auto; /* Pushes the hamburger to the right */
+    margin-left: auto; /* Aligns to the right */
 }
 
 /* Navigation Links */
 .nav-links {
     display: flex;
-    flex-direction: row; /* Flex direction set to row by default */
-    transition: max-height 0.5s ease-out;
+    flex-direction: row;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .logo {
-        max-width: 100px;
-        margin-bottom: 10px;
-    }
-
     .hamburger-menu {
         display: block; /* Show hamburger menu on small screens */
     }
@@ -119,11 +84,25 @@ nav ul a {
         display: none; /* Hide nav links by default on small screens */
         flex-direction: column;
         width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 999;
     }
 
     .nav-links.show {
         display: flex; /* Show nav links when toggled */
-        flex-direction: column; /* Ensure direction is column when shown */
+    }
+    
+    nav ul {
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
     }
 }
 
