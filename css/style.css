@@ -293,12 +293,14 @@ section {
     font-size: 1.2em;
     transition: background-color 0.3s ease, transform 0.3s ease;
     display: inline-block;
+    justify-content: space-between
 }
 
 .btn:hover {
     background-color: #ff8c00;
     transform: scale(1.1);
 }
+
 
 /* About Section */
 .about-section {
