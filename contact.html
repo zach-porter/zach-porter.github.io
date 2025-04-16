@@ -2,32 +2,34 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" href="https://zach-porter.github.io/assets/logo.webp" type="image/webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Zachary Porter | Social Data Scientist</title>
+    <title>Contact Zachary Porter - Social Data Scientist</title> <!-- Simplified Title -->
     <meta name="description" content="Get in touch with Zachary Porter, a Social Data Scientist specializing in sociological analysis, computational social science, and generative AI. Reach out for collaboration or inquiries.">
     <meta name="keywords" content="Contact, Zachary Porter, Social Data Scientist, Collaboration, Inquiry, Generative AI, Computational Social Science">
-    <link rel="canonical" href="https://zach-porter.github.io/contact.html">
+    <link rel="icon" href="https://zach-porter.github.io/assets/logo.webp" type="image/webp">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://zach-porter.github.io/contact.html">
 
     <!-- Schema Markup for SEO -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Person",
+            "@type": "Person", // Changed to Person as it's about contacting the person
             "name": "Zachary Porter",
-            "url": "https://zach-porter.github.io/",
-            "image": "https://zach-porter.github.io/assets/Selfie2.jpeg",
+            "url": "https://zach-porter.github.io/contact.html", // URL of this contact page
+            "image": "https://zach-porter.github.io/assets/Selfie2.jpeg", // Consider using the same primary image across pages for consistency
             "jobTitle": "Social Data Scientist",
+            "email": "mailto:zachjporter89@gmail.com", // Direct email
             "contactPoint": {
                 "@type": "ContactPoint",
-                "email": "mailto:zachjporter89@gmail.com",
-                "contactType": "Customer Support"
+                "email": "zachjporter89@gmail.com", // Email via contact point
+                "contactType": "Enquiry", // More general than Customer Support
+                 "url": "https://zach-porter.github.io/contact.html" // Explicitly link contact point to this page
             },
             "sameAs": [
-                "https://substack.com/@zachjporter",
-                "https://www.linkedin.com/in/zachary-porter"
+                "https://substack.com/@zachjporter", // Added https://
+                "https://www.linkedin.com/in/zachary-porter" // Verify correct LinkedIn URL
             ]
         }
     </script>
@@ -36,20 +38,18 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <!-- Logo item -->
-                <li class="logo-item">
-                    <a href="index.html">
-                        <img src="https://zach-porter.github.io/assets/logo.webp" alt="Zachary Porter Logo" class="logo">
-                    </a>
-                </li>
-                <!-- Hamburger menu icon -->
-                <li class="hamburger-menu">
-                    <span>&#9776;</span> <!-- Using the hamburger icon (☰) -->
-                </li>
-            </ul>
-            <!-- Navigation links -->
-            <ul class="nav-links">
+            <!-- Logo Link directly inside nav -->
+            <a href="index.html" class="logo-link">
+                <img src="https://zach-porter.github.io/assets/logo.webp" alt="Zachary Porter Logo - Home" class="logo">
+            </a>
+    
+            <!-- Hamburger Button directly inside nav (for mobile) -->
+            <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links-list">
+                <span>☰</span> <!-- Hamburger icon -->
+            </button>
+    
+            <!-- Navigation Links UL directly inside nav -->
+            <ul class="nav-links" id="nav-links-list">
                 <li><a href="about.html">About</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -58,27 +58,34 @@
         </nav>
     </header>
 
-    
-
     <main>
-        <section id="contact" class="fade-in-out">
-            <h1>Contact Me</h1>
+        <!-- Added role="region" and aria-labelledby for better screen reader navigation -->
+        <section id="contact" class="fade-in-out" role="region" aria-labelledby="contact-heading">
+            <h1 id="contact-heading">Contact Me</h1>
             <p>If you would like to get in touch, please use the form or email below.</p>
+
             <form action="https://formspree.io/f/mjkbpaya" method="POST" id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send</button>
+                <div> <!-- Wrapped label/input pairs for better structure -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required autocomplete="name">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea> <!-- Added rows attribute -->
+                </div>
+                <button type="submit">Send Message</button> <!-- More specific button text -->
             </form>
 
-            <div id="success-message" style="display:none;">
+            <!-- Added role="alert" for screen readers -->
+            <div id="success-message" style="display:none;" role="alert">
                 <p>Thank you! Your message has been sent successfully. I will get back to you soon.</p>
+            </div>
+             <div id="error-message" style="display:none;" role="alert">
+                <p>Sorry, there was a problem sending your message. Please try again later or use the email address below.</p>
             </div>
 
             <p>Alternatively, you can reach me at <a href="mailto:zachjporter89@gmail.com" class="email-link">zachjporter89@gmail.com</a>.</p>
@@ -92,8 +99,7 @@
         <p>© 2024 Zachary Porter. All rights reserved.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script> <!-- Added defer -->
 </body>
 
 </html>
-

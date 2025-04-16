@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" href="https://zach-porter.github.io/assets/logo.webp" type="image/webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zachary Porter's Portfolio - Social Data Scientist</title>
-    <meta name="description" content="Zachary Porter's portfolio showcasing expertise in social data science, sociological analysis, and computational social science. Explore his work, blog, and research on generative AI.">
-    <meta name="keywords" content="Zachary Porter, Social Data Scientist, Generative AI, Portfolio, Computational Social Science, Sociological Analysis, Blog">
+    <title>Zachary Porter - Social Data Scientist Portfolio</title> <!-- Slightly improved title -->
+    <meta name="description" content="Zachary Porter's portfolio showcasing expertise in social data science, sociological analysis, computational social science, and research on generative AI."> <!-- Added AI research -->
+    <meta name="keywords" content="Zachary Porter, Social Data Scientist, Generative AI, Portfolio, Computational Social Science, Sociological Analysis, Blog, AI Research">
+    <link rel="icon" href="https://zach-porter.github.io/assets/logo.webp" type="image/webp">
+    <link rel="stylesheet" href="css/style.css"> <!-- Corrected path -->
     <link rel="canonical" href="https://zach-porter.github.io/">
-    <link rel="stylesheet" href="../css/style.css">
-    
+
     <!-- Schema Markup for SEO -->
     <script type="application/ld+json">
         {
@@ -23,11 +23,11 @@
             "description": "Zachary Porter is a Social Data Scientist specializing in sociological analysis, computational social science, and generative AI.",
             "worksFor": {
                 "@type": "Organization",
-                "name": "Zachary Porter's Portfolio"
+                "name": "Zachary Porter's Portfolio" // Consider "Independent Researcher" like in about.html for consistency?
             },
             "sameAs": [
-                "https://substack.com/@zachjporter",
-                "https://www.linkedin.com/in/zachary-porter"
+                "https://substack.com/@zachjporter", // Assumed https://
+                "https://www.linkedin.com/in/zachary-porter" // Full LinkedIn URL likely different from about.html, verify which is correct
             ]
         }
     </script>
@@ -36,70 +36,69 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <!-- Logo item -->
-                <li class="logo-item">
-                    <a href="index.html">
-                        <img src="https://zach-porter.github.io/assets/logo.webp" alt="Zachary Porter Logo" class="logo">
-                    </a>
-                </li>
-                <!-- Hamburger menu icon (moved into its own list item) -->
-                <li class="hamburger-menu">
-                    <span>&#9776;</span> <!-- Using the hamburger icon (☰) -->
-                </li>
-            </ul>
-            <!-- Navigation links -->
-            <ul class="nav-links">
+            <!-- Logo Link directly inside nav -->
+            <a href="index.html" class="logo-link">
+                <img src="https://zach-porter.github.io/assets/logo.webp" alt="Zachary Porter Logo - Home" class="logo">
+            </a>
+    
+            <!-- Hamburger Button directly inside nav (for mobile) -->
+            <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links-list">
+                <span>☰</span> <!-- Hamburger icon -->
+            </button>
+    
+            <!-- Navigation Links UL directly inside nav -->
+            <ul class="nav-links" id="nav-links-list">
                 <li><a href="about.html">About</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
-    </header>    
-    
-    
+    </header>
 
-    <section class="hero-section fade-in-out">
-        <div class="hero-content">
-            <h1>Good Afternoon, Welcome to My Portfolio</h1>
-            <p>I am Zachary Porter, a Social Data Scientist with expertise in sociological analysis and computational social science.</p>
-            <a href="portfolio.html" class="btn">View My Work</a>
-        </div>
-        <div class="hero-image">
-            <img src="assets/Selfie.jpeg" alt="Zachary Porter Social Data Scientist">
-        </div>
-    </section>
+    <main>
+        <section class="hero-section fade-in-out">
+            <div class="hero-content">
+                <h1>Good Afternoon, Welcome to My Portfolio</h1> <!-- JS will update greeting -->
+                <p>I am Zachary Porter, a Social Data Scientist with expertise in sociological analysis and computational social science.</p>
+                <a href="portfolio.html" class="btn">View My Work</a>
+            </div>
+            <div class="hero-image">
+                <!-- Improved Alt Text -->
+                <img src="assets/Selfie.jpeg" alt="Headshot of Zachary Porter">
+            </div>
+        </section>
 
-    <section class="parallax fade-in-out">
-        <div class="parallax-overlay"></div> <!-- Overlay container -->
-        <div class="parallax-content">
-            <h2>Recent Master's Graduate Specializing in Generative AI</h2>
-            <p>
-                I am a recent master's graduate with a specialized focus on generative AI and its profound impact on work. My research has delved into the ways in which artificial intelligence is reshaping industries and changing the social dynamics of workers.
-            </p>
-            <p>
-                During my studies, I explored the ethical implications, potential risks, and the transformative power of AI technologies. My passion lies in understanding how AI can be leveraged to drive positive change while ensuring that its integration benefits workers and society. I also seek to understand how generative AI is already altering the landscape of work and how professions are adapting to these changes.
-            </p>
-        </div>
-    </section>
+        <section class="parallax fade-in-out">
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+                <h2>Recent Master's Graduate Specializing in Generative AI</h2>
+                <p>
+                    I am a recent master's graduate with a specialized focus on generative AI and its profound impact on work. My research has delved into the ways in which artificial intelligence is reshaping industries and changing the social dynamics of workers.
+                </p>
+                <p>
+                    During my studies, I explored the ethical implications, potential risks, and the transformative power of AI technologies. My passion lies in understanding how AI can be leveraged to drive positive change while ensuring that its integration benefits workers and society. I also seek to understand how generative AI is already altering the landscape of work and how professions are adapting to these changes.
+                </p>
+            </div>
+        </section>
 
-    <section class="parallax-new fade-in-out">
-        <div class="parallax-overlay"></div>
-        <div class="parallax-content">
-            <h2>My Personal Blog: Work in the Age of AI</h2>
-            <p>
-                Welcome to my blog! Here, I explore the future of work in the age of artificial intelligence, discussing the latest trends, technologies, and research in the field. I cover topics such as the impact of AI on geopolitics, recent research advancements in generative AI, and news from businesses and organizations that develop AI hardware and software.
-            </p>
-            <p>
-                The rise of artificial intelligence has sparked a revolution in the workplace, transforming the way we work and interact with technology. As AI continues to evolve, it presents new opportunities and challenges at the macro-level as well as the micro-level. These changes at the different scales have implications for workers, organizations, and society as a whole.
-            </p>
-            <p>
-                My research has focused on the impact of AI on the future of work, exploring how generative AI technologies are reshaping industries and social relations. By understanding these changes, we can better prepare for the future and ensure that AI benefits individuals, communities, and society as a whole.
-            </p>
-            <a href="blog.html" class="btn">View My Blog Here</a>
-        </div>
-    </section>
+        <section class="parallax-new fade-in-out">
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+                <h2>My Personal Blog: Work in the Age of AI</h2>
+                <p>
+                    Welcome to my blog! Here, I explore the future of work in the age of artificial intelligence, discussing the latest trends, technologies, and research in the field. I cover topics such as the impact of AI on geopolitics, recent research advancements in generative AI, and news from businesses and organizations that develop AI hardware and software.
+                </p>
+                <p>
+                    The rise of artificial intelligence has sparked a revolution in the workplace, transforming the way we work and interact with technology. As AI continues to evolve, it presents new opportunities and challenges at the macro-level as well as the micro-level. These changes at the different scales have implications for workers, organizations, and society as a whole.
+                </p>
+                <p>
+                    My research has focused on the impact of AI on the future of work, exploring how generative AI technologies are reshaping industries and social relations. By understanding these changes, we can better prepare for the future and ensure that AI benefits individuals, communities, and society as a whole.
+                </p>
+                <a href="blog.html" class="btn">View My Blog Here</a>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-logo">
@@ -108,7 +107,7 @@
         <p>© 2024 Zachary Porter. All rights reserved.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script> <!-- Added defer -->
 </body>
 
 </html>

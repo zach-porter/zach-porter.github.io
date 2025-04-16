@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" href="https://zach-porter.github.io/assets/logo.webp" type="image/webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Zachary Porter | Social Data Scientist</title>
-    <meta name="description" content="Explore the portfolio of Zachary Porter, a Social Data Scientist specializing in sociological analysis, computational social science, and generative AI.">
-    <meta name="keywords" content="Zachary Porter, Social Data Scientist, Portfolio, Generative AI, Computational Social Science, Sociological Analysis">
+    <meta name="description" content="Explore the portfolio of Zachary Porter, a Social Data Scientist specializing in sociological analysis, computational social science, agent-based modeling, and generative AI projects.">
+    <meta name="keywords" content="Zachary Porter, Social Data Scientist, Portfolio, Generative AI, Computational Social Science, Sociological Analysis, Agent-Based Modeling, Data Visualization, Tableau">
+    <link rel="icon" href="https://zach-porter.github.io/assets/logo.webp" type="image/webp">
+    <link rel="stylesheet" href="css/style.css"> <!-- Make sure this path is correct -->
     <link rel="canonical" href="https://zach-porter.github.io/portfolio.html">
-    <link rel="stylesheet" href="css/style.css">
 
     <!-- Schema Markup for SEO -->
     <script type="application/ld+json">
@@ -17,17 +17,27 @@
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Zachary Porter",
-            "url": "https://zach-porter.github.io/",
+            "url": "https://zach-porter.github.io/portfolio.html",
             "image": "https://zach-porter.github.io/assets/Selfie2.jpeg",
             "jobTitle": "Social Data Scientist",
+             "description": "Portfolio showcasing Zachary Porter's work in social data science, including generative AI, computational social science, agent-based modeling, and data visualization.",
             "worksFor": {
                 "@type": "Organization",
-                "name": "Zachary Porter's Portfolio"
+                "name": "Independent Researcher"
             },
-            "description": "Zachary Porter is a Social Data Scientist specializing in sociological analysis, computational social science, and generative AI.",
+             "mainEntityOfPage": {
+                 "@type": "WebPage",
+                 "@id": "https://zach-porter.github.io/portfolio.html"
+             },
+            "hasOccupation": {
+                "@type": "Occupation",
+                "name": "Social Data Scientist"
+            },
+            "knowsAbout": ["Social Data Science", "Computational Social Science", "Generative AI", "Agent-Based Modeling", "Network Analysis", "Data Visualization", "Sociology"],
             "sameAs": [
                 "https://substack.com/@zachjporter",
-                "https://www.linkedin.com/in/zachary-porter"
+                "https://www.linkedin.com/in/zach-porter-032a5519b", /* Verify this URL */
+                "https://github.com/zach-porter"
             ]
         }
     </script>
@@ -36,20 +46,18 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <!-- Logo item -->
-                <li class="logo-item">
-                    <a href="index.html">
-                        <img src="https://zach-porter.github.io/assets/logo.webp" alt="Zachary Porter Logo" class="logo">
-                    </a>
-                </li>
-                <!-- Hamburger menu icon -->
-                <li class="hamburger-menu">
-                    <span>&#9776;</span> <!-- Using the hamburger icon (☰) -->
-                </li>
-            </ul>
-            <!-- Navigation links -->
-            <ul class="nav-links">
+            <!-- Logo Link directly inside nav -->
+            <a href="index.html" class="logo-link">
+                <img src="https://zach-porter.github.io/assets/logo.webp" alt="Zachary Porter Logo - Home" class="logo">
+            </a>
+    
+            <!-- Hamburger Button directly inside nav (for mobile) -->
+            <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links-list">
+                <span>☰</span> <!-- Hamburger icon -->
+            </button>
+    
+            <!-- Navigation Links UL directly inside nav -->
+            <ul class="nav-links" id="nav-links-list">
                 <li><a href="about.html">About</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -57,167 +65,143 @@
             </ul>
         </nav>
     </header>
-    
-    
 
-    <!-- Hero Section -->
-    <section class="hero-section fade-in-out">
-        <div class="hero-content">
-            <h1>My Work</h1>
-            <p>Explore the projects I’ve developed during my academic career, focusing on social data science, generative AI, and more.</p>
-        </div>
-        <div class="hero-image">
-            <img src="assets/Selfie2.jpeg" alt="Zachary Porter, Social Data Scientist">
-        </div>
-    </section>
-
-    <!-- Project Sections -->
-    <!-- Video Projects -->
-    <section class="parallax-4 fade-in-out">
-        <div class="parallax-overlay"></div>
-        <div class="parallax-content">
-            <h2>Video Project: Application for Grad School</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/zY7USLhMZLo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>This video project served as a personal statement and visual narrative for my application to graduate school. It showcases my career journey, research interests, and passion for understanding complex socio-technical systems. By combining storytelling with multimedia elements, I aimed to present a compelling case for the importance of narratives and how they impact human complex systems at multiple levels. This video reflects my commitment to using innovative formats to communicate complex ideas effectively.</p>
-        </div>
-    </section>
-
-    <section class="parallax-5 fade-in-out">
-        <div class="parallax-overlay"></div>
-        <div class="parallax-content">
-            <h2>Video Project: Panama, Phase Transitions, and Stories</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/jru0RtWDdZ0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>In this video, I take viewers on a journey through three elements: a moment in time in Panama, phase transitions in both physical and social contexts, as well as the shape of stories. Through the visual medium, I draw parallels between natural phenomena and societal changes, illustrating how small shifts can lead to significant transformations. This project combines my interests in complexity science and sociology, offering a unique perspective on how we understand and interpret the world around us.</p>
-        </div>
-    </section>
-    
-    <section class="parallax-3 fade-in-out">
-        <div class="parallax-overlay"></div>
-        <div class="parallax-content">
-            <h2>Predictive Modeling, Financial Analysis, and Data Cleaning, Wrangling & Visualization</h2>
-            <p>Here are a few projects and repositories that display a some of the important aspects of data science. I try to implement notebooks in python for those that may not be as familiar with python, and I also attempt to use scripts instead of object-oriented programming. Whether that is  developing a model to predict daily or hourly solar energy production based on weather and production data, or you just need to implement good strategies for cleaning your data, I hope these files can be helpful.</p>
-            <div class="button-container">
-                <a href="https://github.com/zach-porter/predictive-modeling" class="btn">View Predictive Modeling Repo on GitHub</a>
-                <a href="https://github.com/zach-porter/financial_analysis" class="btn">View Financial Analysis Repo on GitHub</a>
-                <a href="https://github.com/zach-porter/cleaning_wrangling_visualizing" class="btn">View Cleaning, Wrangling, and Visualizing Repo on GitHub</a>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section fade-in-out">
+            <div class="hero-content">
+                <h1>My Work</h1>
+                <p>Explore projects focusing on social data science, generative AI, agent-based modeling, data visualization, and more.</p>
             </div>
-        </div>
-    </section>
-    
-    <section class="parallax-2 fade-in-out">
-        <div class="parallax-overlay"></div>
-        <div class="parallax-content">
-            <h2>A Few Agent-Based Models Investigating Generative AI's Influence in Society</h2>
-            <p>Here are a few projects and repositories that dive into how AI may be influencing work, social dynamics, and opinion. Again, I try to implement notebooks in python for those that may not be as familiar with python. However, I sometimes use a bit of object-oriented programming(OOP). These models are at the preliminary stages of development, as there are many factors at the micro, mezo, and macro level impacting the dynamics that still need to be investigated. However, these models are first steps into better understanding generative AI's impact on the complex socio-technical systems we live in today. </p>
-            <div class="button-container">
-                <a href="https://github.com/zach-porter/ABM-Organization-AI-integration" class="btn">View the Simpler AI and Organizations ABM on GitHub</a>
-                <a href="https://github.com/zach-porter/abm_OOP_ai_organizations" class="btn">View OOP AI and Organizations ABM on GitHub</a>
-                <a href="https://github.com/zach-porter/ABM-AI-Human-Interaction" class="btn">View AI and Altering Belief on GitHub</a>
+            <div class="hero-image">
+                <img src="assets/Selfie2.jpeg" alt="Zachary Porter working">
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="parallax-7 fade-in-out">
-        <div class="parallax-overlay"></div>
-        <div class="parallax-content" style="width: 100%; height: 100vh; position: relative;">
-            <h2>Dashboards: IBM HR Public Dataset</h2>
-            <div class='tableauPlaceholder' id='viz1733172334723' style='width: 100%; height: 100%; position: absolute; top: 0; left: 0;'>
-                <noscript>
-                    <a href='#'>
-                        <img alt='IBM HR Dataset' src='https://public.tableau.com/static/images/IB/IBMHRDataset_17325882094180/IBMHRDataset/1_rss.png' style='border: none' />
-                    </a>
-                </noscript>
-                <object class='tableauViz' style='width: 100%; height: 100%;'>
-                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                    <param name='embed_code_version' value='3' />
-                    <param name='site_root' value='' />
-                    <param name='name' value='IBMHRDataset_17325882094180/IBMHRDataset' />
-                    <param name='tabs' value='no' />
-                    <param name='toolbar' value='yes' />
-                    <param name='static_image' value='https://public.tableau.com/static/images/IB/IBMHRDataset_17325882094180/IBMHRDataset/1.png' />
-                    <param name='animate_transition' value='yes' />
-                    <param name='display_static_image' value='yes' />
-                    <param name='display_spinner' value='yes' />
-                    <param name='display_overlay' value='yes' />
-                    <param name='display_count' value='yes' />
-                    <param name='language' value='en-US' />
-                </object>
+        <!-- Project Sections -->
+        <article class="parallax-4 fade-in-out" aria-labelledby="video-proj-1-heading">
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+                <h2 id="video-proj-1-heading">Video Project: Application for Grad School</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zY7USLhMZLo" title="YouTube video player: Grad School Application Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>This video project served as a personal statement and visual narrative for my application to graduate school. It showcases my career journey, research interests, and passion for understanding complex socio-technical systems. By combining storytelling with multimedia elements, I aimed to present a compelling case for the importance of narratives and how they impact human complex systems at multiple levels. This video reflects my commitment to using innovative formats to communicate complex ideas effectively.</p>
             </div>
-            <script type='text/javascript'>
-                var divElement = document.getElementById('viz1733172334723');
-                var vizElement = divElement.getElementsByTagName('object')[0];
-                vizElement.style.width = '100%';
-                vizElement.style.height = '100vh';
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
-            </script>
-        </div>
-    </section>
+        </article>
 
-    <section class="parallax-8 fade-in-out">
-        <div class="parallax-overlay"></div>
-        <div class="parallax-content" style="width: 100%; height: 100vh; position: relative;">
-            <h2>Story: World Happiness Report</h2>
-            <div class='tableauPlaceholder' id='viz1733356206468' style='width: 100%; height: 100%; position: absolute; top: 0; left: 0;'>
-                <noscript>
-                    <a href='#'>
-                        <img alt='World Happiness Report' src='https://public.tableau.com/static/images/5T/5T2ZG38ND/1_rss.png' style='border: none' />
-                    </a>
-                </noscript>
-                <object class='tableauViz' style='width: 100%; height: 100%;'>
-                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                    <param name='embed_code_version' value='3' />
-                    <param name='path' value='shared/5T2ZG38ND' />
-                    <param name='toolbar' value='yes' />
-                    <param name='static_image' value='https://public.tableau.com/static/images/5T/5T2ZG38ND/1.png' />
-                    <param name='animate_transition' value='yes' />
-                    <param name='display_static_image' value='yes' />
-                    <param name='display_spinner' value='yes' />
-                    <param name='display_overlay' value='yes' />
-                    <param name='display_count' value='yes' />
-                    <param name='language' value='en-US' />
-                    <param name='filter' value='publish=yes' />
-                </object>
+        <article class="parallax-5 fade-in-out" aria-labelledby="video-proj-2-heading">
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+                <h2 id="video-proj-2-heading">Video Project: Panama, Phase Transitions, and Stories</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jru0RtWDdZ0" title="YouTube video player: Panama, Phase Transitions, and Stories" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>In this video, I take viewers on a journey through three elements: a moment in time in Panama, phase transitions in both physical and social contexts, as well as the shape of stories. Through the visual medium, I draw parallels between natural phenomena and societal changes, illustrating how small shifts can lead to significant transformations. This project combines my interests in complexity science and sociology, offering a unique perspective on how we understand and interpret the world around us.</p>
             </div>
-            <script type='text/javascript'>
-                var divElement = document.getElementById('viz1733356206468');
-                var vizElement = divElement.getElementsByTagName('object')[0];
-                vizElement.style.width = '100%';
-                vizElement.style.height = '100vh';
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
-            </script>
-        </div>
-    </section>
+        </article>
 
-    <section class="parallax-1 fade-in-out">
-        <div class="parallax-overlay"></div>
-        <div class="parallax-content">
-            <h2>Social Simulation Project</h2>
-            <p>In this project, I utilized Python to develop another agent-based simulation that models social dynamics based on Schweighofer and Garcia’s Weighted Balance Opinion Model. This agent-based model simulation explores how individual opinions and social influence evolve over time within a network. By adjusting parameters such as initial opinion distribution, influence weight, and network structure, I examined how consensus or polarization can emerge in social groups. This project highlights the power of computational methods in understanding and predicting complex social behaviors.</p>
-            <a href="https://github.com/zach-porter/ABM-Networked-Weighted-Balance-Theory" class="btn">View on GitHub</a>
-        </div>
-    </section>
-    
-    <section class="parallax-6 fade-in-out">
-        <div class="parallax-overlay"></div>
-        <div class="parallax-content">
-            <h2>Strength of Weak Ties Revisited</h2>
-            <p>This project delves into the concept of the 'Strength of Weak Ties' by sociologist Mark Granovetter, re-examining its relevance in the context of modern network theory. By analyzing the role of weak ties—relationships characterized by infrequent interaction—I explored their critical impact on information diffusion and community building. Through this analysis, I identified emerging trends and potential areas for further research, demonstrating how weak ties continue to play a pivotal role in the flow of information and social dynamics.</p>
-            <a href="https://github.com/zach-porter/Writtings/blob/main/Strength%20of%20Weak%20Ties%20Analyzed%20Zach%20Porter.pdf" class="btn">View on GitHub</a>
-        </div>
-    </section>
+        <article class="parallax-3 fade-in-out" aria-labelledby="data-sci-heading">
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+                <h2 id="data-sci-heading">Data Science Fundamentals: Modeling, Analysis & Wrangling</h2>
+                <p>Explore repositories showcasing essential data science techniques implemented primarily in Python notebooks for accessibility. Whether developing a model to predict solar energy production or implementing strategies for data cleaning, these files aim to be helpful examples.</p>
+                <div class="button-container">
+                    <a href="https://github.com/zach-porter/predictive-modeling" class="btn" target="_blank" rel="noopener noreferrer">Predictive Modeling Repo (GitHub)</a>
+                    <a href="https://github.com/zach-porter/financial_analysis" class="btn" target="_blank" rel="noopener noreferrer">Financial Analysis Repo (GitHub)</a>
+                    <a href="https://github.com/zach-porter/cleaning_wrangling_visualizing" class="btn" target="_blank" rel="noopener noreferrer">Data Cleaning/Wrangling/Viz Repo (GitHub)</a>
+                </div>
+            </div>
+        </article>
 
-    <section class="parallax-3 fade-in-out">
-        <div class="parallax-overlay"></div>
-        <div class="parallax-content">
-            <h2>First Master's Thesis on Decentralized Autonomous Organizations</h2>
-            <p>My Master's thesis investigates the sociological implications of Decentralized Autonomous Organizations (DAOs). Through a mixed-method case study, I analyzed how DAOs, as a novel form of organizational structure, challenge traditional concepts of governance, decision-making, and social interaction. This research integrates insights from organizational sociology and network science with real-world case studies to offer a comprehensive view of the challenges of decentralized governance. The findings contribute to a deeper understanding of how digital transformations are reshaping organizational landscapes.</p>
-            <a href="https://github.com/zach-porter/Writtings/blob/main/MSc%20CSC%20Zachary%20Porter_%20Research%20Dissertation.pdf" class="btn">View on GitHub</a>
-        </div>
-    </section>
+        <article class="parallax-2 fade-in-out" aria-labelledby="abm-ai-heading">
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+                <h2 id="abm-ai-heading">Agent-Based Models: Exploring AI's Societal Influence</h2>
+                <p>These preliminary agent-based models (ABMs) investigate the potential impacts of AI on work dynamics, social interactions, and opinion formation. While still under development, they represent initial steps into understanding generative AI's impact on complex socio-technical systems.</p>
+                <div class="button-container">
+                    <a href="https://github.com/zach-porter/ABM-Organization-AI-integration" class="btn" target="_blank" rel="noopener noreferrer">Simple AI & Organizations ABM (GitHub)</a>
+                    <a href="https://github.com/zach-porter/abm_OOP_ai_organizations" class="btn" target="_blank" rel="noopener noreferrer">OOP AI & Organizations ABM (GitHub)</a>
+                    <a href="https://github.com/zach-porter/ABM-AI-Human-Interaction" class="btn" target="_blank" rel="noopener noreferrer">AI & Belief Alteration ABM (GitHub)</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Tableau IBM HR Dataset -->
+        <!-- The outer 'article' provides the parallax background -->
+        <article class="parallax-7 fade-in-out" aria-labelledby="dashboard-ibm-heading">
+             <div class="parallax-overlay"></div>
+             <!-- This div centers the content and gives it padding -->
+             <div class="parallax-content tableau-container">
+                 <!-- Heading is inside the container, above the viz -->
+                 <h2 id="dashboard-ibm-heading">Dashboard: IBM HR Attrition Analysis</h2>
+                 <!-- This is the placeholder div the JS API targets. Its size is controlled by CSS -->
+                 <div class='tableauPlaceholder' id='viz1733172334723' title="Tableau Viz: IBM HR Dataset">
+                    <noscript>
+                        <!-- Link to the direct view URL for users without JS -->
+                        <a href='https://public.tableau.com/views/IBMHRDataset_17325882094180/IBMHRDataset' target='_blank' rel='noopener noreferrer'>
+                            <img alt='IBM HR Dataset Dashboard Snapshot ' src='https://public.tableau.com/static/images/IB/IBMHRDataset_17325882094180/IBMHRDataset/1_rss.png' style='border: none' />
+                        </a>
+                    </noscript>
+                    <!-- The object tag is technically optional when using JS API V2/V3 but can remain as a fallback or reference -->
+                    <object class='tableauViz' style='display:none;'>
+                         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                         <param name='embed_code_version' value='3' />
+                         <param name='site_root' value='' />
+                         <param name='name' value='IBMHRDataset_17325882094180/IBMHRDataset' />
+                         <param name='tabs' value='no' />
+                         <param name='toolbar' value='yes' />
+                    </object>
+                </div>
+            </div>
+        </article>
+
+        <!-- Tableau World Happiness Report -->
+        <article class="parallax-8 fade-in-out" aria-labelledby="story-whr-heading">
+             <div class="parallax-overlay"></div>
+             <div class="parallax-content tableau-container">
+                 <h2 id="story-whr-heading">Story: World Happiness Report Insights</h2>
+                 <div class='tableauPlaceholder' id='viz1733356206468' title="Tableau Story: World Happiness Report">
+                    <noscript>
+                        <a href='https://public.tableau.com/views/World-Happiness-Report_17333561577740/Story1' target='_blank' rel='noopener noreferrer'>
+                            <img alt='World Happiness Report Story Snapshot ' src='https://public.tableau.com/static/images/Wo/World-Happiness-Report_17333561577740/Story1/1_rss.png' style='border: none' />
+                        </a>
+                    </noscript>
+                    <object class='tableauViz' style='display:none;'>
+                         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                         <param name='embed_code_version' value='3' />
+                         <param name='site_root' value='' />
+                         <param name='name' value='World-Happiness-Report_17333561577740/Story1' />
+                         <param name='tabs' value='no' />
+                         <param name='toolbar' value='yes' />
+                    </object>
+                </div>
+            </div>
+        </article>
+
+        <article class="parallax-1 fade-in-out" aria-labelledby="soc-sim-heading">
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+                <h2 id="soc-sim-heading">Social Simulation: Weighted Balance Opinion Model</h2>
+                <p>This project utilizes Python to simulate social dynamics based on Schweighofer and Garcia’s Weighted Balance Opinion Model. This agent-based model explores how individual opinions and social influence evolve over time within a network, examining consensus and polarization dynamics.</p>
+                <a href="https://github.com/zach-porter/ABM-Networked-Weighted-Balance-Theory" class="btn" target="_blank" rel="noopener noreferrer">View Simulation on GitHub</a>
+            </div>
+        </article>
+
+        <article class="parallax-6 fade-in-out" aria-labelledby="weak-ties-heading">
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+                <h2 id="weak-ties-heading">Analysis: Strength of Weak Ties Revisited</h2>
+                <p>This project delves into Mark Granovetter's 'Strength of Weak Ties' concept, re-examining its relevance in modern network theory. By analyzing the role of weak ties, I explored their impact on information diffusion and community building, highlighting their continued pivotal role.</p>
+                <a href="https://github.com/zach-porter/Writtings/blob/main/Strength%20of%20Weak%20Ties%20Analyzed%20Zach%20Porter.pdf" class="btn" target="_blank" rel="noopener noreferrer">View Analysis (PDF on GitHub)</a>
+            </div>
+        </article>
+
+        <article class="parallax-3 fade-in-out" aria-labelledby="dao-thesis-heading">
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+                <h2 id="dao-thesis-heading">MSc Thesis: Sociological Implications of DAOs</h2>
+                <p>My first Master's thesis investigates the sociological implications of Decentralized Autonomous Organizations (DAOs). Through a mixed-method case study, I analyzed how DAOs challenge traditional concepts of governance, decision-making, and social interaction, integrating insights from sociology and network science.</p>
+                <a href="https://github.com/zach-porter/Writtings/blob/main/MSc%20CSC%20Zachary%20Porter_%20Research%20Dissertation.pdf" class="btn" target="_blank" rel="noopener noreferrer">View Thesis (PDF on GitHub)</a>
+            </div>
+        </article>
+    </main>
 
     <footer>
         <div class="footer-logo">
@@ -226,8 +210,10 @@
         <p>© 2024 Zachary Porter. All rights reserved.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- IMPORTANT: Load Tableau API Script FIRST -->
+    <script src='https://public.tableau.com/javascripts/api/tableau-2.min.js'></script>
+    <!-- THEN Load Your Custom Script -->
+    <script src="js/script.js" defer></script>
+
 </body>
-
 </html>
-

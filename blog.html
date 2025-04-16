@@ -2,101 +2,58 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" href="https://zach-porter.github.io/assets/logo.webp" type="image/webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zachary Porter's Blog - Insights on AI and Social Data Science</title>
-    <meta name="description" content="Explore the latest insights and thoughts from Zachary Porter on AI, social data science, and technological trends.">
-    <meta name="keywords" content="Zachary Porter, AI, Social Data Science, Blog, AI Risk, AI Hacking, AI Scientist">
-    <link rel="stylesheet" href="../css/style.css"> <!-- Link to your CSS file -->
-
-    <!-- Canonical Link -->
+    <title>Blog - Zachary Porter | AI & Social Data Science Insights</title> <!-- Refined title -->
+    <meta name="description" content="Explore the latest insights and thoughts from Zachary Porter on AI, social data science, the future of work, and related technological trends."> <!-- Expanded description -->
+    <meta name="keywords" content="Zachary Porter, Blog, AI, Social Data Science, Future of Work, AI Risk, AI Safety, Technology Trends, Substack"> <!-- Added keywords -->
+    <link rel="icon" href="https://zach-porter.github.io/assets/logo.webp" type="image/webp">
+    <link rel="stylesheet" href="css/style.css"> <!-- Corrected path -->
     <link rel="canonical" href="https://zach-porter.github.io/blog.html">
 
     <!-- JSON-LD Schema Markup for Blog -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Blog",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://zach-porter.github.io/blog.html"
-        },
-        "headline": "Zachary Porter's Blog - Insights on AI and Social Data Science",
-        "description": "Explore the latest insights and thoughts from Zachary Porter on AI, social data science, and technological trends.",
-        "author": {
-            "@type": "Person",
+        "@type": "Blog", // Type is Blog for the page itself
+        "url": "https://zach-porter.github.io/blog.html",
+        "name": "Zachary Porter's Blog - AI & Social Data Science Insights", // Name of the blog
+        "description": "Insights on AI, social data science, the future of work, and technology trends.",
+        "publisher": { // Publisher of the blog
+            "@type": "Person", // Assuming the person is the publisher
             "name": "Zachary Porter",
-            "url": "https://zach-porter.github.io/about.html"
+            "url": "https://zach-porter.github.io/about.html",
+             "image": "https://zach-porter.github.io/assets/logo.webp" // Logo as publisher image
         },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Zachary Porter",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://zach-porter.github.io/assets/logo.webp"
-            }
-        },
-        "image": "https://zach-porter.github.io/assets/Blog1.webp",
-        "blogPost": [
-            {
-                "@type": "BlogPosting",
-                "headline": "The Newly Released AI Risk Repository",
-                "image": "https://zach-porter.github.io/assets/Blog3.jpeg",
-                "url": "https://substack.com/@zachjporter/p-148065880",
-                "datePublished": "2024-08-15",
-                "author": "Zachary Porter",
-                "publisher": {
-                    "@type": "Organization",
-                    "name": "Zachary Porter"
-                }
-            },
-            {
-                "@type": "BlogPosting",
-                "headline": "The AI Agents Learning to Hack",
-                "image": "https://zach-porter.github.io/assets/Blog2.jpeg",
-                "url": "https://substack.com/@zachjporter/p-147992091",
-                "datePublished": "2024-08-10",
-                "author": "Zachary Porter",
-                "publisher": {
-                    "@type": "Organization",
-                    "name": "Zachary Porter"
-                }
-            },
-            {
-                "@type": "BlogPosting",
-                "headline": "The AI Scientist",
-                "image": "https://zach-porter.github.io/assets/Blog1.webp",
-                "url": "https://substack.com/@zachjporter/p-148026577",
-                "datePublished": "2024-08-05",
-                "author": "Zachary Porter",
-                "publisher": {
-                    "@type": "Organization",
-                    "name": "Zachary Porter"
-                }
-            }
-        ]
+        "mainEntityOfPage": { // Links the blog schema to this specific page
+             "@type": "WebPage",
+             "@id": "https://zach-porter.github.io/blog.html"
+         }
+         // Individual blog posts (BlogPosting) could be added dynamically if needed,
+         // but defining the Blog itself is good for the main blog page.
+         // The previous schema mixed Blog and BlogPosting attributes at the top level.
     }
     </script>
+    <!-- Note: Individual BlogPosting schema is better placed on the actual Substack pages -->
+    <!-- Or could be dynamically added here via JS if snippets were more detailed -->
+
 </head>
 
 <body>
     <header>
         <nav>
-            <ul>
-                <!-- Logo item -->
-                <li class="logo-item">
-                    <a href="index.html">
-                        <img src="https://zach-porter.github.io/assets/logo.webp" alt="Zachary Porter Logo" class="logo">
-                    </a>
-                </li>
-                <!-- Hamburger menu icon -->
-                <li class="hamburger-menu">
-                    <span>&#9776;</span> <!-- Using the hamburger icon (☰) -->
-                </li>
-            </ul>
-            <!-- Navigation links -->
-            <ul class="nav-links">
+            <!-- Logo Link directly inside nav -->
+            <a href="index.html" class="logo-link">
+                <img src="https://zach-porter.github.io/assets/logo.webp" alt="Zachary Porter Logo - Home" class="logo">
+            </a>
+    
+            <!-- Hamburger Button directly inside nav (for mobile) -->
+            <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links-list">
+                <span>☰</span> <!-- Hamburger icon -->
+            </button>
+    
+            <!-- Navigation Links UL directly inside nav -->
+            <ul class="nav-links" id="nav-links-list">
                 <li><a href="about.html">About</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -105,63 +62,78 @@
         </nav>
     </header>
 
+    <main>
+        <section class="blog-section" aria-labelledby="blog-heading">
+            <h1 id="blog-heading">Latest Insights on AI & Society</h1> <!-- More engaging heading -->
+            <div class="blog-main-content">
+                <!-- Main Blog Post Area - Content loaded by JS -->
+                <!-- Added role="article" and aria-live="polite" for dynamic content -->
+                <article class="blog-post" id="main-blog-post" aria-live="polite">
+                    <!-- Fallback content if JS fails or JSON is empty -->
+                    <h2>Loading Latest Post...</h2>
+                    <p>If the post doesn't load, please check the blog snippets on the right or visit my <a href="https://substack.com/@zachjporter" target="_blank" rel="noopener noreferrer">Substack page</a> directly.</p>
+                    <!-- JS will replace this content -->
+                     <noscript>
+                         <p>JavaScript is required to load the main blog post content dynamically. Please visit <a href="https://substack.com/@zachjporter" target="_blank" rel="noopener noreferrer">my Substack</a> for the latest posts.</p>
+                    </noscript>
+                </article>
 
-    <section class="blog-section">
-        <h1>My Latest Substack Posts</h1>
-        <div class="blog-main-content">
-            <!-- Main Blog Post -->
-            <article class="blog-post" id="main-blog-post">
-                <img src="https://zach-porter.github.io/assets/logo.webp" alt="Zachary Porter Logo" class="blog-post-logo">
-                <h2>Main Blog Post Title</h2>
-                <p>Main blog post content... (e.g., show one full blog article here)</p>
-            </article>
-            <!-- Blog Snippets -->
-            <div class="blog-snippets">
-                <article class="blog-snippet fade-in-out">
-                    <img src="assets/blog-image-4.webp" alt="AI Robots" class="blog-image">
-                    <h2><a href="https://substack.com/@zachjporter/p-148213457" target="_blank">US Export Restrictions Drama</a></h2>
-                    <p>Chinese Firms Circumvent US Export Restrictions Using Cloud Services</p>
-                    <a href="https://substack.com/@zachjporter/p-148213457" target="_blank" class="btn">Read More</a>
-                </article>
-                <article class="blog-snippet fade-in-out">
-                    <img src="assets/blog-image-4.webp" alt="AI Robots" class="blog-image">
-                    <h2><a href="https://substack.com/@zachjporter/p-148173962" target="_blank">SB 1047</a></h2>
-                    <p>The AI Bill Causing Debate in California</p>
-                    <a href="https://substack.com/@zachjporter/p-148173962" target="_blank" class="btn">Read More</a>
-                </article>
-                <article class="blog-snippet fade-in-out">
-                    <img src="assets/blog-image-2.webp" alt="AI Robots" class="blog-image">
-                    <h2><a href="https://substack.com/@zachjporter/p-148132287" target="_blank">5 New AI Models</a></h2>
-                    <p>New Releases from Midjourney, Ideogram, OpenAI, Microsoft, and Salesforce</p>
-                    <a href="https://substack.com/@zachjporter/p-148132287" target="_blank" class="btn">Read More</a>
-                </article>
-                <article class="blog-snippet fade-in-out">
-                    <img src="assets/blog-image-1.webp" alt="AI Robots" class="blog-image">
-                    <h2><a href="https://substack.com/@zachjporter/p-148094298" target="_blank">The New SWE-Verified Benchmark from OpenAI and SWE Authors</a></h2>
-                    <p>A New Benchmark from OpenAI Risk</p>
-                    <a href="https://substack.com/@zachjporter/p-148094298" target="_blank" class="btn">Read More</a>
-                </article>
-                <article class="blog-snippet fade-in-out">
-                    <img src="assets/Blog3.jpeg" alt="Chatting Anime" class="blog-image">
-                    <h2><a href="https://substack.com/@zachjporter/p-148065880" target="_blank">The Newly Released AI Risk Repository</a></h2>
-                    <p>A New Framework for Discussing and Navigating AI's Risk and Safety Measures</p>
-                    <a href="https://substack.com/@zachjporter/p-148065880" target="_blank" class="btn">Read More</a>
-                </article>
-                <!-- Additional blog snippets can go here -->
-                <article class="blog-snippet fade-in-out">
-                    <img src="assets/Blog2.jpeg" alt="Robot AI typing" class="blog-image">
-                    <h2><a href="https://substack.com/@zachjporter/p-147992091" target="_blank">The AI Agents Learning to Hack</a></h2>
-                    <p>New Research from this year: training AI Agents to Hack and defending against Hacking</p>
-                    <a href="https://substack.com/@zachjporter/p-147992091" target="_blank" class="btn">Read More</a>
-                </article>
-                <article class="blog-snippet fade-in-out">
-                    <img src="assets/Blog1.webp" alt="Robot AI scientist" class="blog-image">
-                    <h2><a href="https://substack.com/@zachjporter/p-148026577" target="_blank">The AI Scientist</a></h2>
-                    <p>The Future of Science: An AI That Writes Its Own Papers</p>
-                    <a href="https://substack.com/@zachjporter/p-148026577" target="_blank" class="btn">Read More</a>
-                </article>
-            </div>
-    </section>
+                <!-- Blog Snippets - Using <aside> as it's related but separate content -->
+                <aside class="blog-snippets" aria-label="Recent Blog Posts">
+                    <!-- Snippet 1 -->
+                    <article class="blog-snippet fade-in-out" aria-labelledby="snippet-1-heading">
+                        <img src="assets/blog-image-4.webp" alt="Stylized image representing cloud services and restrictions" class="blog-image">
+                        <h2 id="snippet-1-heading"><a href="https://substack.com/@zachjporter/p-148213457" target="_blank" rel="noopener noreferrer">US Export Restrictions Drama</a></h2>
+                        <p>Chinese Firms Circumvent US Export Restrictions Using Cloud Services</p>
+                        <a href="https://substack.com/@zachjporter/p-148213457" target="_blank" rel="noopener noreferrer" class="btn">Read More on Substack</a>
+                    </article>
+                    <!-- Snippet 2 -->
+                    <article class="blog-snippet fade-in-out" aria-labelledby="snippet-2-heading">
+                         <!-- Assume same image, update if different -->
+                        <img src="assets/blog-image-4.webp" alt="Representation of AI policy debate" class="blog-image">
+                        <h2 id="snippet-2-heading"><a href="https://substack.com/@zachjporter/p-148173962" target="_blank" rel="noopener noreferrer">SB 1047</a></h2>
+                        <p>The AI Bill Causing Debate in California</p>
+                        <a href="https://substack.com/@zachjporter/p-148173962" target="_blank" rel="noopener noreferrer" class="btn">Read More on Substack</a>
+                    </article>
+                    <!-- Snippet 3 -->
+                     <article class="blog-snippet fade-in-out" aria-labelledby="snippet-3-heading">
+                        <img src="assets/blog-image-2.webp" alt="Montage of AI company logos" class="blog-image">
+                        <h2 id="snippet-3-heading"><a href="https://substack.com/@zachjporter/p-148132287" target="_blank" rel="noopener noreferrer">5 New AI Models</a></h2>
+                        <p>New Releases from Midjourney, Ideogram, OpenAI, Microsoft, and Salesforce</p>
+                        <a href="https://substack.com/@zachjporter/p-148132287" target="_blank" rel="noopener noreferrer" class="btn">Read More on Substack</a>
+                    </article>
+                    <!-- Snippet 4 -->
+                    <article class="blog-snippet fade-in-out" aria-labelledby="snippet-4-heading">
+                        <img src="assets/blog-image-1.webp" alt="Abstract representation of code verification benchmark" class="blog-image">
+                        <h2 id="snippet-4-heading"><a href="https://substack.com/@zachjporter/p-148094298" target="_blank" rel="noopener noreferrer">The New SWE-Verified Benchmark</a></h2> <!-- Shortened H2 -->
+                        <p>A New Benchmark from OpenAI Risk and SWE Authors</p> <!-- Clarified text -->
+                        <a href="https://substack.com/@zachjporter/p-148094298" target="_blank" rel="noopener noreferrer" class="btn">Read More on Substack</a>
+                    </article>
+                     <!-- Snippet 5 -->
+                    <article class="blog-snippet fade-in-out" aria-labelledby="snippet-5-heading">
+                        <img src="assets/Blog3.jpeg" alt="Diagram showing AI risk categories" class="blog-image">
+                        <h2 id="snippet-5-heading"><a href="https://substack.com/@zachjporter/p-148065880" target="_blank" rel="noopener noreferrer">The Newly Released AI Risk Repository</a></h2>
+                        <p>A New Framework for Discussing and Navigating AI's Risk and Safety Measures</p>
+                        <a href="https://substack.com/@zachjporter/p-148065880" target="_blank" rel="noopener noreferrer" class="btn">Read More on Substack</a>
+                    </article>
+                    <!-- Snippet 6 -->
+                    <article class="blog-snippet fade-in-out" aria-labelledby="snippet-6-heading">
+                        <img src="assets/Blog2.jpeg" alt="Abstract image of AI agent hacking simulation" class="blog-image">
+                        <h2 id="snippet-6-heading"><a href="https://substack.com/@zachjporter/p-147992091" target="_blank" rel="noopener noreferrer">The AI Agents Learning to Hack</a></h2>
+                        <p>Recent Research: Training AI Agents to Hack and Defending Against Hacking</p> <!-- Slightly rephrased -->
+                        <a href="https://substack.com/@zachjporter/p-147992091" target="_blank" rel="noopener noreferrer" class="btn">Read More on Substack</a>
+                    </article>
+                     <!-- Snippet 7 -->
+                    <article class="blog-snippet fade-in-out" aria-labelledby="snippet-7-heading">
+                        <img src="assets/Blog1.webp" alt="Robot depicted as a scientist working in a lab" class="blog-image">
+                        <h2 id="snippet-7-heading"><a href="https://substack.com/@zachjporter/p-148026577" target="_blank" rel="noopener noreferrer">The AI Scientist</a></h2>
+                        <p>The Future of Science: An AI That Writes Its Own Papers</p>
+                        <a href="https://substack.com/@zachjporter/p-148026577" target="_blank" rel="noopener noreferrer" class="btn">Read More on Substack</a>
+                    </article>
+                </aside> <!-- End blog-snippets aside -->
+            </div> <!-- End blog-main-content -->
+        </section>
+    </main>
 
     <footer>
         <div class="footer-logo">
@@ -170,7 +142,7 @@
         <p>© 2024 Zachary Porter. All rights reserved.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script> <!-- Added defer -->
 </body>
 
 </html>
