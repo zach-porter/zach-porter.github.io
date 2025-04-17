@@ -706,22 +706,42 @@ section {
 
 
 /* Blog Snippets Area */
-.blog-snippets {
-    flex: 1 1 350px; /* Less space, basis 350px */
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+.blog-snippets-container {
+    display: grid;
+    /* Adjust columns based on screen size */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between grid items */
+    width: 100%; /* Takes full width of parent */
+    max-width: 1200px; /* Max width of the grid */
+    margin: 0 auto; /* Center the grid */
+}
+
+.blog-snippets-container .loading-message,
+.blog-snippets-container .error-message {
+    grid-column: 1 / -1; /* Make messages span all columns */
+    text-align: center;
+    padding: 20px;
 }
 
 .blog-snippet {
+    /* Styles for individual items */
     padding: 25px;
     background: #fff;
     box-shadow: 0 4px 12px var(--shadow-light);
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex; /* Use flex for layout */
+    display: flex;
     flex-direction: column;
+    /* Fade-in-out class is added in JS */
+    opacity: 0; /* Start hidden for fade-in */
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+.blog-snippet.show { /* Style added by intersection observer */
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .blog-snippet:hover {
     transform: translateY(-5px);

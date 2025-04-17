@@ -86,6 +86,92 @@ function initViz2() {
      }
 }
 
+// --- Function to Load Blog Snippets ---
+async function loadBlogSnippets() {
+    const container = document.getElementById('blog-snippets-container');
+    if (!container) return; // Exit if container not found
+
+    const snippetsJsonPath = 'assets/blog-snippets.json'; // Path relative to blog.html
+
+    try {
+        const response = await fetch(snippetsJsonPath);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const posts = await response.json();
+
+        if (!Array.isArray(posts) || posts.length === 0) {
+             container.innerHTML = '<p>No posts found.</p>';
+             console.warn('Blog snippets data is empty or not an array.');
+             return;
+        }
+
+        let snippetsHTML = ''; // Build HTML string
+        posts.forEach((post, index) => {
+            // Basic validation of post object
+            if (!post.title || !post.url || !post.description || !post.imageUrl || !post.altText) {
+                 console.warn(`Skipping post at index ${index} due to missing data.`, post);
+                 return; // Skip this post if data is missing
+            }
+
+            const headingId = `snippet-${index}-heading`; // Generate unique ID
+
+            snippetsHTML += `
+                <article class="blog-snippet fade-in-out" aria-labelledby="${headingId}">
+                    <img src="${post.imageUrl}" alt="${post.altText}" class="blog-image">
+                    <h2 id="${headingId}">
+                        <a href="${post.url}" target="_blank" rel="noopener noreferrer">${post.title}</a>
+                    </h2>
+                    <p>${post.description}</p>
+                    <a href="${post.url}" target="_blank" rel="noopener noreferrer" class="btn">Read More on Substack</a>
+                </article>
+            `;
+        });
+
+        container.innerHTML = snippetsHTML; // Replace loading message with generated HTML
+
+        // Optional: Re-trigger Intersection Observer for newly added fade-in-out elements
+        // This requires the observer setup code to be accessible or refactored
+        // If animations aren't working on snippets, this is likely needed.
+        // Example (requires observer instance to be available globally or passed):
+         initializeSnippetObserver(); // You'd need to define this function
+
+    } catch (error) {
+        console.error('Error loading blog snippets:', error);
+        container.innerHTML = `<p class="error-message">Could not load blog posts. Please try again later or visit <a href="https://substack.com/@zachjporter" target="_blank" rel="noopener noreferrer">Substack</a>.</p>`;
+    }
+}
+
+// Function to specifically observe the dynamically loaded snippets
+function initializeSnippetObserver() {
+    try {
+        const snippetsToObserve = document.querySelectorAll('#blog-snippets-container .fade-in-out');
+        if (snippetsToObserve.length > 0) {
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px',
+            };
+             // Assuming 'observer' logic is similar to the main observer
+            const snippetObserver = new IntersectionObserver(function (entries, observer) {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        // Snippets likely don't need fade-out, so unobserve once shown
+                        observer.unobserve(entry.target);
+                    }
+                    // No 'else' needed if we don't fade-out snippets
+                });
+            }, observerOptions);
+
+            snippetsToObserve.forEach((element) => {
+                snippetObserver.observe(element);
+            });
+        }
+    } catch (error) {
+        console.error("Error initializing Snippet Intersection Observer:", error);
+    }
+}
+
 
 // --- Main DOMContentLoaded Listener ---
 document.addEventListener('DOMContentLoaded', function () {
@@ -326,46 +412,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // --- Fetching Main Blog Content ---
     const mainBlogPostContainer = document.getElementById('main-blog-post');
-    // Check if we are on the blog page AND the container exists
-    if (mainBlogPostContainer && window.location.pathname.includes('blog.html')) {
-        const blogJsonPath = 'assets/blog-post.json'; // Adjust if needed
-
-        fetch(blogJsonPath)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Network response was not ok: ${response.statusText} (status: ${response.status})`);
-                }
-                return response.json();
-            })
-            .then(posts => {
-                 // Ensure posts is an array and has content
-                if (Array.isArray(posts) && posts.length > 0) {
-                    const mainPost = posts[0]; // Assuming the first post is the main one
-
-                    // Validate expected structure
-                    if (mainPost && mainPost.title && mainPost.intro && Array.isArray(mainPost.sections)) {
-                        let fullContent = `<h2>${mainPost.title}</h2><p>${mainPost.intro}</p>`; // Use H2 for main post title
-                        mainPost.sections.forEach((section) => {
-                            if(section.heading && section.content) {
-                                fullContent += `<h3>${section.heading}</h3><p>${section.content}</p>`; // H3 for sections
-                            }
-                        });
-                        mainBlogPostContainer.innerHTML = fullContent;
-                    } else {
-                        console.error('Blog post data is missing required fields:', mainPost);
-                        throw new Error('Invalid blog post structure in JSON.');
-                    }
-                } else {
-                     console.warn('No blog posts found in JSON data or data is not an array.');
-                     mainBlogPostContainer.innerHTML = '<p>No recent posts available to display here. Check out the snippets or visit Substack.</p>';
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching or processing the blog post data:', error);
-                // Display user-friendly error in the container
-                mainBlogPostContainer.innerHTML = `<p style="color: #cc0000;">Failed to load the latest blog post. Please try again later or visit my <a href="https://substack.com/@zachjporter" target="_blank" rel="noopener noreferrer">Substack page</a> directly. Error: ${error.message}</p>`;
-            });
+    // --- Load Blog Snippets ---
+    // Check if we are on the blog page and call the function to load snippets
+        // --- Load Blog Snippets (New Logic) ---
+    if (window.location.pathname.includes('blog.html')) {
+        loadBlogSnippets(); // Call the function to load snippets
     }
+    
 
 
     // --- Initialize Tableau Vizzes ---

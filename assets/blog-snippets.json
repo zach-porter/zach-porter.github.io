@@ -1,0 +1,58 @@
+[
+    {
+      "id": "snippet-1",
+      "title": "US Export Restrictions Drama",
+      "description": "Chinese Firms Circumvent US Export Restrictions Using Cloud Services",
+      "url": "https://substack.com/@zachjporter/p-148213457",
+      "imageUrl": "assets/blog-image-5.webp",
+      "altText": "Stylized image representing cloud services and restrictions"
+    },
+    {
+      "id": "snippet-2",
+      "title": "SB 1047",
+      "description": "The AI Bill Causing Debate in California",
+      "url": "https://substack.com/@zachjporter/p-148173962",
+      "imageUrl": "assets/blog-image-4.webp",
+      "altText": "Representation of AI policy debate"
+    },
+    {
+      "id": "snippet-3",
+      "title": "5 New AI Models",
+      "description": "New Releases from Midjourney, Ideogram, OpenAI, Microsoft, and Salesforce",
+      "url": "https://substack.com/@zachjporter/p-148132287",
+      "imageUrl": "assets/blog-image-2.webp",
+      "altText": "Montage of AI company logos"
+    },
+    {
+      "id": "snippet-4",
+      "title": "The New SWE-Verified Benchmark",
+      "description": "A New Benchmark from OpenAI Risk and SWE Authors",
+      "url": "https://substack.com/@zachjporter/p-148094298",
+      "imageUrl": "assets/blog-image-1.webp",
+      "altText": "Abstract representation of code verification benchmark"
+    },
+    {
+      "id": "snippet-5",
+      "title": "The Newly Released AI Risk Repository",
+      "description": "A New Framework for Discussing and Navigating AI's Risk and Safety Measures",
+      "url": "https://substack.com/@zachjporter/p-148065880",
+      "imageUrl": "assets/Blog3.jpeg",
+      "altText": "Diagram showing AI risk categories"
+    },
+    {
+      "id": "snippet-6",
+      "title": "The AI Agents Learning to Hack",
+      "description": "Recent Research: Training AI Agents to Hack and Defending Against Hacking",
+      "url": "https://substack.com/@zachjporter/p-147992091",
+      "imageUrl": "assets/Blog2.jpeg",
+      "altText": "Abstract image of AI agent hacking simulation"
+    },
+    {
+      "id": "snippet-7",
+      "title": "The AI Scientist",
+      "description": "The Future of Science: An AI That Writes Its Own Papers",
+      "url": "https://substack.com/@zachjporter/p-148026577",
+      "imageUrl": "assets/Blog1.webp",
+      "altText": "Robot depicted as a scientist working in a lab"
+    }
+  ]
