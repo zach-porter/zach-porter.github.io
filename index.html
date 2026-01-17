@@ -8,6 +8,9 @@
     <meta name="description" content="Zachary Porter's portfolio showcasing expertise in social data science, sociological analysis, computational social science, and research on generative AI."> <!-- Added AI research -->
     <meta name="keywords" content="Zachary Porter, Social Data Scientist, Generative AI, Portfolio, Computational Social Science, Sociological Analysis, Blog, AI Research">
     <link rel="icon" href="https://zach-porter.github.io/assets/logo.webp" type="image/webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"> <!-- Corrected path -->
     <link rel="canonical" href="https://zach-porter.github.io/">
 
@@ -48,6 +51,7 @@
     
             <!-- Navigation Links UL directly inside nav -->
             <ul class="nav-links" id="nav-links-list">
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -57,45 +61,100 @@
     </header>
 
     <main>
-        <section class="hero-section fade-in-out">
+        <section class="hero-section editorial-hero fade-in-out">
             <div class="hero-content">
-                <h1>Good Afternoon, Welcome to My Portfolio</h1> <!-- JS will update greeting -->
-                <p>I am Zachary Porter, a Social Data Scientist with expertise in sociological analysis and computational social science.</p>
-                <a href="portfolio.html" class="btn">View My Work</a>
+                <p class="hero-kicker">PhD Candidate, Sociology - Trinity College Dublin</p>
+                <h1>Social scientist studying technological change</h1>
+                <p class="hero-sub">I use computational tools, qualitative methods, and sociological theory to understand the intersection of technological change and society.</p>
+                <div class="hero-actions">
+                    <a href="portfolio.html" class="btn">View Projects</a>
+                    <a href="blog.html" class="btn btn-secondary">Read the Blog</a>
+                </div>
             </div>
             <div class="hero-image">
-                <!-- Improved Alt Text -->
                 <img src="assets/Selfie.jpeg" alt="Headshot of Zachary Porter">
             </div>
         </section>
 
-        <section class="parallax fade-in-out">
-            <div class="parallax-overlay"></div>
-            <div class="parallax-content">
-                <h2>Recent Master's Graduate Specializing in Generative AI</h2>
-                <p>
-                    I am a recent master's graduate with a specialized focus on generative AI and its profound impact on work. My research has delved into the ways in which artificial intelligence is reshaping industries and changing the social dynamics of workers.
-                </p>
-                <p>
-                    During my studies, I explored the ethical implications, potential risks, and the transformative power of AI technologies. My passion lies in understanding how AI can be leveraged to drive positive change while ensuring that its integration benefits workers and society. I also seek to understand how generative AI is already altering the landscape of work and how professions are adapting to these changes.
-                </p>
+        <section class="credibility-band fade-in-out">
+            <div class="section-inner">
+                <ul class="highlights">
+                    <li>PhD candidate in Sociology at Trinity College Dublin</li>
+                    <li>Mixed methods: computational analysis, qualitative research, theory-driven inquiry</li>
+                    <li>Focus on how technology is shaping society, and how society shapes technology</li>
+                    <li>Projects grounded in public-facing questions and real-world discourse</li>
+                </ul>
             </div>
         </section>
 
-        <section class="parallax-new fade-in-out">
-            <div class="parallax-overlay"></div>
-            <div class="parallax-content">
-                <h2>My Personal Blog: Work in the Age of AI</h2>
-                <p>
-                    Welcome to my blog! Here, I explore the future of work in the age of artificial intelligence, discussing the latest trends, technologies, and research in the field. I cover topics such as the impact of AI on geopolitics, recent research advancements in generative AI, and news from businesses and organizations that develop AI hardware and software.
-                </p>
-                <p>
-                    The rise of artificial intelligence has sparked a revolution in the workplace, transforming the way we work and interact with technology. As AI continues to evolve, it presents new opportunities and challenges at the macro-level as well as the micro-level. These changes at the different scales have implications for workers, organizations, and society as a whole.
-                </p>
-                <p>
-                    My research has focused on the impact of AI on the future of work, exploring how generative AI technologies are reshaping industries and social relations. By understanding these changes, we can better prepare for the future and ensure that AI benefits individuals, communities, and society as a whole.
-                </p>
-                <a href="blog.html" class="btn">View My Blog Here</a>
+        <section class="featured-work section-light fade-in-out">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Featured work</h2>
+                    <p>Selected projects from data science, sociological research, and AI studies.</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <p class="tag in-progress">In progress</p>
+                        <h3>Inequality by Justification</h3>
+                        <p>Sentiment analysis, topic modeling, and LLM-assisted deductive coding on Reddit to study how generative AI is legitimized, justified, and critiqued in parent- and education-focused communities.</p>
+                    </article>
+                    <article class="feature-card">
+                        <p class="tag">Dashboard</p>
+                        <h3>IBM HR Attrition Analysis</h3>
+                        <p>Interactive Tableau dashboard exploring patterns of retention, attrition, and employee context in the IBM HR dataset.</p>
+                        <a href="portfolio.html#dashboard-ibm-heading" class="text-link">View in portfolio</a>
+                    </article>
+                    <article class="feature-card">
+                        <p class="tag">Methods</p>
+                        <h3>Agent-Based Models for AI & Organizations</h3>
+                        <p>Preliminary models that examine AI adoption, social influence, and opinion formation in organizational settings.</p>
+                        <a href="portfolio.html#abm-ai-heading" class="text-link">View in portfolio</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="research-focus section-dark fade-in-out">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Research focus</h2>
+                    <p>Big questions, clear methods, and a focus on how people make sense of change.</p>
+                </div>
+                <div class="research-grid">
+                    <article class="focus-card">
+                        <h3>Generative AI and Justifications</h3>
+                        <p>How people justify, contest, and normalize new technologies in everyday discourse.</p>
+                    </article>
+                    <article class="focus-card">
+                        <h3>Education, Inequality, and Institutions</h3>
+                        <p>How key stakeholder practices and policy shape who benefits from technological shifts in education.</p>
+                    </article>
+                    <article class="focus-card">
+                        <h3>GenAI, Work, and Sociotechnical Imaginaries</h3>
+                        <p>How we think of the future shapes the GenAI systems being built, altering their design and use.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="writing-band fade-in-out">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Writing & commentary</h2>
+                    <p>Notes on the future of work, AI research/news, and the social life of technology.</p>
+                </div>
+                <a href="blog.html" class="btn">Read the Blog</a>
+            </div>
+        </section>
+
+        <section class="contact-panel fade-in-out">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Let's connect</h2>
+                    <p>Reach out for collaboration, research conversations, or speaking inquiries.</p>
+                </div>
+                <a href="contact.html" class="btn btn-secondary">Contact me</a>
             </div>
         </section>
     </main>

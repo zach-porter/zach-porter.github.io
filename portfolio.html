@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Zachary Porter | Social Data Scientist</title>
-    <meta name="description" content="Explore the portfolio of Zachary Porter, a Social Data Scientist specializing in sociological analysis, computational social science, agent-based modeling, and generative AI projects.">
-    <meta name="keywords" content="Zachary Porter, Social Data Scientist, Portfolio, Generative AI, Computational Social Science, Sociological Analysis, Agent-Based Modeling, Data Visualization, Tableau">
+    <title>Portfolio - Zachary Porter | Sociology PhD Candidate</title>
+    <meta name="description" content="Explore the portfolio of Zachary Porter, a sociology PhD candidate focused on technological change, computational social science, and generative AI research.">
+    <meta name="keywords" content="Zachary Porter, Sociology, PhD Candidate, Portfolio, Generative AI, Computational Social Science, Sociological Analysis, Agent-Based Modeling, Data Visualization, Tableau">
     <link rel="icon" href="https://zach-porter.github.io/assets/logo.webp" type="image/webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"> <!-- Make sure this path is correct -->
     <link rel="canonical" href="https://zach-porter.github.io/portfolio.html">
 
@@ -19,11 +22,11 @@
             "name": "Zachary Porter",
             "url": "https://zach-porter.github.io/portfolio.html",
             "image": "https://zach-porter.github.io/assets/Selfie2.jpeg",
-            "jobTitle": "Social Data Scientist",
-             "description": "Portfolio showcasing Zachary Porter's work in social data science, including generative AI, computational social science, agent-based modeling, and data visualization.",
+            "jobTitle": "PhD Candidate, Sociology",
+             "description": "Portfolio showcasing Zachary Porter's work on technological change, computational social science, and generative AI research.",
             "worksFor": {
                 "@type": "Organization",
-                "name": "Independent Researcher"
+                "name": "Trinity College Dublin"
             },
              "mainEntityOfPage": {
                  "@type": "WebPage",
@@ -31,7 +34,7 @@
              },
             "hasOccupation": {
                 "@type": "Occupation",
-                "name": "Social Data Scientist"
+                "name": "Sociology PhD Candidate"
             },
             "knowsAbout": ["Social Data Science", "Computational Social Science", "Generative AI", "Agent-Based Modeling", "Network Analysis", "Data Visualization", "Sociology"],
             "sameAs": [
@@ -58,8 +61,9 @@
     
             <!-- Navigation Links UL directly inside nav -->
             <ul class="nav-links" id="nav-links-list">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
@@ -68,13 +72,57 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-section fade-in-out">
+        <section class="hero-section editorial-hero fade-in-out">
             <div class="hero-content">
                 <h1>My Work</h1>
                 <p>Explore projects focusing on social data science, generative AI, agent-based modeling, data visualization, and more.</p>
             </div>
             <div class="hero-image">
                 <img src="assets/Selfie2.jpeg" alt="Zachary Porter working">
+            </div>
+        </section>
+
+        <section class="featured-work section-light fade-in-out">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Featured work</h2>
+                    <p>Selected projects that represent my current interests in narrative, simulation, and sociological analysis.</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <p class="tag">Video</p>
+                        <h3>Application for Grad School</h3>
+                        <p>Personal statement video connecting narrative, research interests, and complex socio-technical systems.</p>
+                        <a href="#video-proj-1-heading" class="text-link">Jump to project</a>
+                    </article>
+                    <article class="feature-card">
+                        <p class="tag">Video</p>
+                        <h3>Panama, Phase Transitions, and Stories</h3>
+                        <p>Visual exploration of phase transitions in physical and social worlds through storytelling.</p>
+                        <a href="#video-proj-2-heading" class="text-link">Jump to project</a>
+                    </article>
+                    <article class="feature-card">
+                        <p class="tag">Thesis</p>
+                        <h3>Sociological Implications of DAOs</h3>
+                        <p>Mixed-method case study on governance, decision-making, and influence in decentralized organizations.</p>
+                        <a href="#dao-thesis-heading" class="text-link">Jump to project</a>
+                    </article>
+                    <article class="feature-card">
+                        <p class="tag">Simulation</p>
+                        <h3>Weighted Balance Opinion Model</h3>
+                        <p>Agent-based model of opinion dynamics, consensus, and polarization in networks.</p>
+                        <a href="#soc-sim-heading" class="text-link">Jump to project</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-group fade-in-out">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Media projects</h2>
+                    <p>Video-based work that blends narrative, research interests, and sociological themes.</p>
+                </div>
             </div>
         </section>
 
@@ -96,6 +144,15 @@
                 <p>In this video, I take viewers on a journey through three elements: a moment in time in Panama, phase transitions in both physical and social contexts, as well as the shape of stories. Through the visual medium, I draw parallels between natural phenomena and societal changes, illustrating how small shifts can lead to significant transformations. This project combines my interests in complexity science and sociology, offering a unique perspective on how we understand and interpret the world around us.</p>
             </div>
         </article>
+
+        <section class="portfolio-group fade-in-out">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Code + methods</h2>
+                    <p>Repositories and models that highlight applied computational social science.</p>
+                </div>
+            </div>
+        </section>
 
         <article class="parallax-3 fade-in-out" aria-labelledby="data-sci-heading">
             <div class="parallax-overlay"></div>
@@ -122,6 +179,15 @@
                 </div>
             </div>
         </article>
+
+        <section class="portfolio-group fade-in-out">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Data visualization</h2>
+                    <p>Interactive dashboards and stories built in Tableau.</p>
+                </div>
+            </div>
+        </section>
 
         <!-- Tableau IBM HR Dataset -->
         <!-- The outer 'article' provides the parallax background -->
@@ -157,23 +223,19 @@
              <div class="parallax-overlay"></div>
              <div class="parallax-content tableau-container">
                  <h2 id="story-whr-heading">Story: World Happiness Report Insights</h2>
-                 <div class='tableauPlaceholder' id='viz1733356206468' title="Tableau Story: World Happiness Report">
-                    <noscript>
-                        <a href='https://public.tableau.com/views/World-Happiness-Report_17333561577740/Story1' target='_blank' rel='noopener noreferrer'>
-                            <img alt='World Happiness Report Story Snapshot ' src='https://public.tableau.com/static/images/Wo/World-Happiness-Report_17333561577740/Story1/1_rss.png' style='border: none' />
-                        </a>
-                    </noscript>
-                    <object class='tableauViz' style='display:none;'>
-                         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                         <param name='embed_code_version' value='3' />
-                         <param name='site_root' value='' />
-                         <param name='name' value='World-Happiness-Report_17333561577740/Story1' />
-                         <param name='tabs' value='no' />
-                         <param name='toolbar' value='yes' />
-                    </object>
-                </div>
+                 <p>An interactive Tableau story that explores global wellbeing patterns across time and place.</p>
+                 <a href="https://public.tableau.com/views/World-Happiness-Report_17333561577740/Story1" class="btn" target="_blank" rel="noopener noreferrer">View the Tableau story</a>
             </div>
         </article>
+
+        <section class="portfolio-group fade-in-out">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Research writing</h2>
+                    <p>Longer-form analyses and thesis work.</p>
+                </div>
+            </div>
+        </section>
 
         <article class="parallax-1 fade-in-out" aria-labelledby="soc-sim-heading">
             <div class="parallax-overlay"></div>
@@ -184,7 +246,7 @@
             </div>
         </article>
 
-        <article class="parallax-6 fade-in-out" aria-labelledby="weak-ties-heading">
+        <article class="parallax-10 fade-in-out" aria-labelledby="weak-ties-heading">
             <div class="parallax-overlay"></div>
             <div class="parallax-content">
                 <h2 id="weak-ties-heading">Analysis: Strength of Weak Ties Revisited</h2>
@@ -193,7 +255,7 @@
             </div>
         </article>
 
-        <article class="parallax-3 fade-in-out" aria-labelledby="dao-thesis-heading">
+        <article class="parallax-9 fade-in-out" aria-labelledby="dao-thesis-heading">
             <div class="parallax-overlay"></div>
             <div class="parallax-content">
                 <h2 id="dao-thesis-heading">MSc Thesis: Sociological Implications of DAOs</h2>
